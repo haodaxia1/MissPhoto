@@ -8,7 +8,7 @@
     android:background="#535151"
     android:weightSum="1">
     <LinearLayout
-        123
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#fff">
@@ -24,6 +24,7 @@
             android:text="              MissPhoto"
             android:textSize="25dp"
             android:paddingTop="10dp"/>
+
     </LinearLayout>
     <LinearLayout
         android:layout_width="350dp"
