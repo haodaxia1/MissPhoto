@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.a15530.missphoto.MainActivity">
+
+    <!-- 导航栏 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/yuanjiao"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="MissPhoto"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+    <!-- 信息介绍 -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- 头像 -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/cat"/>
+
+        <!-- 文字信息 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3sp"
+            android:orientation="vertical">
+            <!-- 昵称 -->
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="昵称：异次元喵君"
+                android:background="@drawable/yuanjiao"/>
+            <!-- 描述 -->
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2sp"
+                android:hint="描述：爱生活爱摄影的铲屎官！"
+                android:background="@drawable/yuanjiao"/>
+            <!-- 联系方式 -->
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2sp"
+                android:hint="联系方式："
+                android:background="@drawable/yuanjiao"
+                android:gravity="left|top"
+                android:inputType="textMultiLine"
+                android:minLines="4"/>
+        </LinearLayout>
+        <!-- 上传摄影作品按钮 -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:text="上传摄影作品"
+            android:drawableLeft="@drawable/camera"
+            />
+        <!-- 摄影作品 -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/picture"/>
+    </LinearLayout>
+
+
+</LinearLayout>
