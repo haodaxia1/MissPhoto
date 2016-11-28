@@ -3,37 +3,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/ll"
     android:orientation="vertical"
+    android:id="@+id/ll"
+    android:background="#fff"
     tools:context="com.example.administrator.missphoto.MainActivity">
 
     <FrameLayout
         android:id="@+id/contaner"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_weight="5">
     </FrameLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
         android:gravity="bottom">
 
 
-        <!--首页-->
+        <!--主页-->
         <LinearLayout
-            android:gravity="center"
             android:layout_weight="1"
             android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
             <ImageButton
-                android:background="#00000000"
-                android:scaleType="fitXY"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
                 android:id="@+id/btn_home"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:src="@drawable/fraghome"/>
             <TextView
                 android:textSize="12dp"
@@ -45,18 +43,15 @@
 
         <!--画作浏览页-->
         <LinearLayout
-            android:gravity="center"
             android:layout_weight="1"
             android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
             <ImageButton
-                android:background="#00000000"
-                android:scaleType="fitXY"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
                 android:id="@+id/btn_camera"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:src="@drawable/fragcamera"/>
             <TextView
                 android:textSize="12dp"
@@ -65,20 +60,17 @@
                 android:text="摄影"/>
 
         </LinearLayout>
-        <!--发布页-->
+        <!--发布-->
         <LinearLayout
-            android:gravity="center"
             android:layout_weight="1"
             android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
             <ImageButton
-                android:background="#00000000"
-                android:scaleType="fitXY"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
                 android:id="@+id/btn_post"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:src="@drawable/fragpost"/>
             <TextView
                 android:textSize="12dp"
@@ -89,18 +81,15 @@
         </LinearLayout>
         <!--需求浏览页-->
         <LinearLayout
-            android:gravity="center"
             android:layout_weight="1"
             android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
             <ImageButton
-                android:background="#00000000"
-                android:scaleType="fitXY"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
                 android:id="@+id/btn_request"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:src="@drawable/fragrequest"/>
             <TextView
                 android:textSize="12dp"
@@ -111,18 +100,15 @@
         </LinearLayout>
         <!--个人空间-->
         <LinearLayout
-            android:gravity="center"
             android:layout_weight="1"
             android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
             <ImageButton
-                android:background="#00000000"
-                android:scaleType="fitXY"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
                 android:id="@+id/btn_mine"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:src="@drawable/fragmine"/>
             <TextView
                 android:textSize="12dp"
