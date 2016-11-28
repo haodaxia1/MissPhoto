@@ -35,6 +35,11 @@
                 android:layout_height="40dp"
                 android:id="@+id/btn_home"
                 android:src="@drawable/fraghome"/>
+            <TextView
+                android:textSize="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="首页"/>
 
         </LinearLayout>
 
@@ -53,6 +58,11 @@
                 android:layout_height="40dp"
                 android:id="@+id/btn_camera"
                 android:src="@drawable/fragcamera"/>
+            <TextView
+                android:textSize="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="摄影"/>
 
         </LinearLayout>
         <!--发布页-->
@@ -70,6 +80,11 @@
                 android:layout_height="40dp"
                 android:id="@+id/btn_post"
                 android:src="@drawable/fragpost"/>
+            <TextView
+                android:textSize="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="发布"/>
 
         </LinearLayout>
         <!--需求浏览页-->
@@ -87,6 +102,11 @@
                 android:layout_height="40dp"
                 android:id="@+id/btn_request"
                 android:src="@drawable/fragrequest"/>
+            <TextView
+                android:textSize="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="需求"/>
 
         </LinearLayout>
         <!--个人空间-->
@@ -104,6 +124,11 @@
                 android:layout_height="40dp"
                 android:id="@+id/btn_mine"
                 android:src="@drawable/fragmine"/>
+            <TextView
+                android:textSize="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的"/>
 
         </LinearLayout>
 
