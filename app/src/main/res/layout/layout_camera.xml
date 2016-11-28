@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,11 +10,72 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.administrator.missphoto.MainActivity">
 
-
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="画作浏览界面1"
-        android:textSize="30sp"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!-- 头像 -->
+            <ImageView
+                android:id="@+id/IvCameraHeadportrait"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/touxiang1"/>
+            <!-- 名字 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10sp"
+                android:layout_toRightOf="@id/IvCameraHeadportrait"
+                android:layout_centerVertical="true"
+                android:text="奇异博士"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textAllCaps="true" />
+            <!-- 关注 -->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/follow"/>
+        </RelativeLayout>
+        <!-- 作品展示 -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/shili5"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!-- 显示点赞数 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="91位用户点赞"
+                android:textSize="15sp"
+                android:layout_marginLeft="30sp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                />
+            <!-- 点赞按钮 -->
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="点赞"
+                android:textSize="12sp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/yuanjiao"
+                android:drawableLeft="@drawable/like"/>
+        </RelativeLayout>
+        <!-- 评论 -->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/zhijiao"
+            android:hint="请输入你的评论"/>
+    </LinearLayout>
 
-</LinearLayout>
+</ScrollView>

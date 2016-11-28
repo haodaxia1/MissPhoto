@@ -10,11 +10,35 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.administrator.missphoto.MainActivity">
 
-    <TextView
+     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="个人空间页面"
-        android:textSize="30sp"/>
-
+        android:text="                     -----登录方式-----"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="350dp"
+        android:textSize="20sp"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/qq"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp"/>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/phone"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="20dp"/>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/qq"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="20dp"/>
+    </LinearLayout>
 
 </LinearLayout>
