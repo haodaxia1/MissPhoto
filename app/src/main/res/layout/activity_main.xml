@@ -3,10 +3,112 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:id="@+id/ll"
     tools:context="com.example.administrator.missphoto.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+
+    <FrameLayout
+        android:id="@+id/contaner"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_weight="5">
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="bottom">
+
+
+        <!--主页-->
+        <LinearLayout
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:background="#e0000000"
+                android:scaleType="fitXY"
+                android:id="@+id/btn_home"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/fraghome"/>
+
+        </LinearLayout>
+
+        <!--画作浏览页-->
+        <LinearLayout
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:background="#e0000000"
+                android:scaleType="fitXY"
+                android:id="@+id/btn_camera"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/fragcamera"/>
+
+        </LinearLayout>
+        <!--发布-->
+        <LinearLayout
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:background="#e0000000"
+                android:scaleType="fitXY"
+                android:id="@+id/btn_post"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/fragpost"/>
+
+        </LinearLayout>
+        <!--需求浏览页-->
+        <LinearLayout
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:background="#e0000000"
+                android:scaleType="fitXY"
+                android:id="@+id/btn_request"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/fragrequest"/>
+
+        </LinearLayout>
+        <!--个人空间-->
+        <LinearLayout
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:background="#e0000000"
+                android:scaleType="fitXY"
+                android:id="@+id/btn_mine"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/fragmine"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
 </LinearLayout>

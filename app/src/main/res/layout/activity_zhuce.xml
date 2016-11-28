@@ -38,7 +38,7 @@
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/touxiang"
+            android:src="@drawable/touxiang1"
             android:id="@+id/btn_touxiang"
             android:background="#fff"
             android:layout_gravity="center"
