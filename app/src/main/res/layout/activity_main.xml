@@ -20,7 +20,7 @@
         android:gravity="bottom">
 
 
-        <!--主页-->
+        <!--首页-->
         <LinearLayout
             android:gravity="center"
             android:layout_weight="1"
