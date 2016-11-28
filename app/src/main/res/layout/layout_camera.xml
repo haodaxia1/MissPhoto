@@ -10,6 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.administrator.missphoto.MainActivity">
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -46,16 +47,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
+            android:layout_marginTop="20sp"
+            android:layout_marginLeft="5sp"
+            android:layout_marginRight="5sp"
             android:src="@drawable/shili5"/>
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12sp">
             <!-- 显示点赞数 -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="91位用户点赞"
-                android:textSize="15sp"
+                android:textSize="19sp"
                 android:layout_marginLeft="30sp"
                 android:layout_centerVertical="true"
                 android:layout_alignParentLeft="true"
