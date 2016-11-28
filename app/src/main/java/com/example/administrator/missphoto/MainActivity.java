@@ -8,7 +8,6 @@ import android.view.Window;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
-
 public class MainActivity extends Activity {
 
     private LinearLayout ll;
