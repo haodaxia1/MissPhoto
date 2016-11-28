@@ -4,39 +4,46 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#fff"
     tools:context="com.example.administrator.missphoto.MainActivity">
 
      <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="                     -----登录方式-----"
-        android:layout_gravity="center_horizontal"
+        android:text="-----登录方式-----"
+         android:layout_gravity="center"
+         android:gravity="center"
         android:layout_marginTop="350dp"
         android:textSize="20sp"/>
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <ImageButton
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:src="@drawable/qq"
             android:layout_marginLeft="25dp"
+            android:id="@+id/btn_mine_qq"
+            android:background="#fff"
             android:layout_marginTop="20dp"/>
         <ImageButton
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:src="@drawable/phone"
             android:layout_marginLeft="45dp"
+            android:id="@+id/btn_mine_phone"
+            android:background="#fff"
             android:layout_marginTop="20dp"/>
         <ImageButton
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:src="@drawable/qq"
+            android:src="@drawable/weibo"
+            android:background="#fff"
+            android:id="@+id/btn_mine_weibo"
             android:layout_marginLeft="45dp"
             android:layout_marginTop="20dp"/>
     </LinearLayout>

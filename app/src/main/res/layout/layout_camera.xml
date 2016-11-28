@@ -44,17 +44,18 @@
         </RelativeLayout>
         <!-- 作品展示 -->
         <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="239dp"
+            android:layout_height="339dp"
             android:adjustViewBounds="true"
             android:layout_marginTop="20sp"
             android:layout_marginLeft="5sp"
             android:layout_marginRight="5sp"
-            android:src="@drawable/shili5"/>
+            android:src="@drawable/shili5"
+            android:layout_gravity="center"/>
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12sp">
+            android:layout_marginTop="15dp">
             <!-- 显示点赞数 -->
             <TextView
                 android:layout_width="wrap_content"
@@ -80,6 +81,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/zhijiao"
+            android:layout_marginTop="15dp"
             android:hint="请输入你的评论"/>
     </LinearLayout>
 
