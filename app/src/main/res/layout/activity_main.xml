@@ -55,7 +55,7 @@
                 android:src="@drawable/fragcamera"/>
 
         </LinearLayout>
-        <!--发布-->
+        <!--发布页-->
         <LinearLayout
             android:gravity="center"
             android:layout_weight="1"
