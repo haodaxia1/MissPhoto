@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:id="@+id/ll"
+    android:background="#fff"
     tools:context="com.example.administrator.missphoto.MainActivity">
 
     <FrameLayout
