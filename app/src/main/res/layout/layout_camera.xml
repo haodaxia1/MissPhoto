@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbars="vertical"
+    android:fadingEdge="vertical"
+    android:background="#EAF8FD">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@color/colorAccentzs"
-    tools:context="com.example.administrator.missphoto.MainActivity"
-    android:weightSum="1">
-    <RelativeLayout
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    tools:context="com.example.administrator.missphoto.MainActivity">
+    <LinearLayout
         android:background="@drawable/yuanjiao"
         android:layout_width="match_parent"
         android:layout_height="40dp">
@@ -19,8 +26,7 @@
         <ImageButton
             android:layout_width="33dp"
             android:layout_height="match_parent"
-            android:background="@drawable/btn_back"
-            />
+            android:background="@drawable/btn_back"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -29,57 +35,60 @@
             android:textSize="@dimen/abc_action_bar_content_inset_material"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"/>
-    </RelativeLayout>
-    <RelativeLayout
+    </LinearLayout>
+    <LinearLayout
         android:background="@color/colorPrimaryDarkzs"
         android:layout_width="match_parent"
-        android:layout_height="478dp"
-        android:layout_margin="16dp">
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="44dp">
+            android:layout_height="match_parent">
             <ImageButton
                 android:id="@+id/IvCameraHeadportrait"
-                android:layout_width="28dp"
-                android:layout_height="28dp"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
                 android:layout_margin="8dp"
                 android:background="@drawable/touxiang1" />
             <TextView
-                android:layout_toRightOf="@id/IvCameraHeadportrait"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="奇异博士"
                 android:textStyle="bold"
-                android:layout_marginLeft="44dp"
-                android:layout_marginTop="13dp"/>
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/IvCameraHeadportrait" />
             <Button
                 android:layout_width="66dp"
                 android:layout_height="23dp"
                 android:background="@drawable/yuanjiao"
                 android:paddingLeft="7dp"
-                android:layout_marginLeft="219dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginTop="11dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="15dp"
                 android:drawableLeft="@drawable/userme"
                 android:text="关注">
             </Button>
         </RelativeLayout>
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp">
+            android:layout_marginTop="6dp">
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="320dp"
                 android:background="@drawable/shili5" />
-        </RelativeLayout>
+        </LinearLayout>
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="366dp">
+            android:layout_marginTop="10dp">
             <Button
                 android:layout_width="118dp"
                 android:layout_height="23dp"
+                android:paddingLeft="4dp"
                 android:background="@drawable/yuanjiao"
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="5dp"
@@ -90,8 +99,10 @@
             <Button
                 android:layout_width="62dp"
                 android:layout_height="23dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"
+                android:paddingLeft="4dp"
                 android:background="@drawable/yuanjiao"
-                android:layout_marginLeft="219dp"
                 android:layout_marginTop="5dp"
                 android:drawableLeft="@drawable/like"
                 android:text="点赞"
@@ -101,18 +112,185 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="400dp">
+            android:layout_marginTop="10dp">
             <EditText
-                android:layout_width="278dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
+                android:layout_margin="8dp"
                 android:background="@drawable/yuanjiao"
                 android:hint="请输入您的评论"/>
         </RelativeLayout>
-    </RelativeLayout>
+   </LinearLayout>
 
+    <!--重复-->
+    <LinearLayout
+        android:background="@color/colorPrimaryDarkzs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageButton
+                android:id="@+id/IvCameraHeadportrait2"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/touxiang1" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="奇异博士"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/IvCameraHeadportrait2" />
+            <Button
+                android:layout_width="66dp"
+                android:layout_height="23dp"
+                android:background="@drawable/yuanjiao"
+                android:paddingLeft="7dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="15dp"
+                android:drawableLeft="@drawable/userme"
+                android:text="关注">
+            </Button>
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="320dp"
+                android:background="@drawable/shili5" />
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <Button
+                android:layout_width="118dp"
+                android:layout_height="23dp"
+                android:paddingLeft="4dp"
+                android:background="@drawable/yuanjiao"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="5dp"
+                android:drawableLeft="@drawable/liked"
+                android:scaleType="fitXY"
+                android:text="91位用户点赞">
+            </Button>
+            <Button
+                android:layout_width="62dp"
+                android:layout_height="23dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"
+                android:paddingLeft="4dp"
+                android:background="@drawable/yuanjiao"
+                android:layout_marginTop="5dp"
+                android:drawableLeft="@drawable/like"
+                android:text="点赞"
+                >
+            </Button>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/yuanjiao"
+                android:hint="请输入您的评论"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <!--重复-->
+    <LinearLayout
+        android:background="@color/colorPrimaryDarkzs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageButton
+                android:id="@+id/IvCameraHeadportrait1"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/touxiang1" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="奇异博士"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/IvCameraHeadportrait1" />
+            <Button
+                android:layout_width="66dp"
+                android:layout_height="23dp"
+                android:background="@drawable/yuanjiao"
+                android:paddingLeft="7dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="15dp"
+                android:drawableLeft="@drawable/userme"
+                android:text="关注">
+            </Button>
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="320dp"
+                android:background="@drawable/shili5" />
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <Button
+                android:layout_width="118dp"
+                android:layout_height="23dp"
+                android:paddingLeft="4dp"
+                android:background="@drawable/yuanjiao"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="5dp"
+                android:drawableLeft="@drawable/liked"
+                android:scaleType="fitXY"
+                android:text="91位用户点赞">
+            </Button>
+            <Button
+                android:layout_width="62dp"
+                android:layout_height="23dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"
+                android:paddingLeft="4dp"
+                android:background="@drawable/yuanjiao"
+                android:layout_marginTop="5dp"
+                android:drawableLeft="@drawable/like"
+                android:text="点赞"
+                >
+            </Button>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/yuanjiao"
+                android:hint="请输入您的评论"/>
+        </RelativeLayout>
+    </LinearLayout>
 </LinearLayout>
-
-
-
-
+</ScrollView>
