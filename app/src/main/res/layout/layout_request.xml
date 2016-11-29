@@ -7,6 +7,8 @@
     android:scrollbars="vertical"
     android:fadingEdge="vertical"
     android:background="#EAF8FD">
+
+
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -29,7 +31,7 @@
         android:background="@drawable/yuanjiao">
 
         <ImageButton
-            android:background="#ffffff"
+            android:background="#fff"
             android:src="@drawable/btn_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

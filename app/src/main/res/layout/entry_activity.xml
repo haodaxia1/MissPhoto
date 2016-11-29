@@ -47,11 +47,12 @@
            android:layout_height="150dp" />
 
    </LinearLayout>
-  <ImageButton
+  <Button
       android:id="@+id/anniu7"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:src="@drawable/anniu"
+      android:text="浏览更多作品"
       android:background="@drawable/yuanjiao"
       />
     <ImageView
