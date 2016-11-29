@@ -29,13 +29,17 @@
             android:layout_height="wrap_content">
 
             <ImageButton
+                android:layout_gravity="center"
+                android:background="#00000000"
+                android:scaleType="fitXY"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:id="@+id/btn_home"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
                 android:src="@drawable/fraghome"/>
             <TextView
+                android:textAlignment="center"
                 android:textSize="12dp"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="首页"/>
 
@@ -49,13 +53,17 @@
             android:layout_height="wrap_content">
 
             <ImageButton
+                android:layout_gravity="center"
+                android:background="#00000000"
+                android:scaleType="fitXY"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:id="@+id/btn_camera"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
                 android:src="@drawable/fragcamera"/>
             <TextView
+                android:textAlignment="center"
                 android:textSize="12dp"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="摄影"/>
 
@@ -68,13 +76,17 @@
             android:layout_height="wrap_content">
 
             <ImageButton
+                android:layout_gravity="center"
+                android:background="#00000000"
+                android:scaleType="fitXY"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:id="@+id/btn_post"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
                 android:src="@drawable/fragpost"/>
             <TextView
+                android:textAlignment="center"
                 android:textSize="12dp"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="发布"/>
 
@@ -87,13 +99,17 @@
             android:layout_height="wrap_content">
 
             <ImageButton
+                android:layout_gravity="center"
+                android:background="#00000000"
+                android:scaleType="fitXY"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:id="@+id/btn_request"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
                 android:src="@drawable/fragrequest"/>
             <TextView
+                android:textAlignment="center"
                 android:textSize="12dp"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="需求"/>
 
@@ -106,13 +122,17 @@
             android:layout_height="wrap_content">
 
             <ImageButton
+                android:layout_gravity="center"
+                android:background="#00000000"
+                android:scaleType="fitXY"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:id="@+id/btn_mine"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
                 android:src="@drawable/fragmine"/>
             <TextView
+                android:textAlignment="center"
                 android:textSize="12dp"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="我的"/>
 
