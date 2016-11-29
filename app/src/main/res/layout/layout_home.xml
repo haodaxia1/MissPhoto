@@ -44,11 +44,11 @@
                 android:paddingTop="10dp"
                 android:background="#ffffff"/>
         </LinearLayout>
-        <!--<ViewFlipper
+        <ViewFlipper
             android:id="@+id/flipper"
             android:layout_width="match_parent"
             android:layout_height="190dp">
-        </ViewFlipper>-->
+        </ViewFlipper>
         <!--最新约稿栏目代码-->
         <TextView
             android:layout_width="match_parent"
