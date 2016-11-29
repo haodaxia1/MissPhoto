@@ -18,6 +18,7 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.layout_home, container, false);
     }
+
       /*  flipper = (ViewFlipper)view.findViewById(R.id.flipper);
 
         *//*
