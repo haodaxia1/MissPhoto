@@ -225,7 +225,7 @@
                         android:scaleType="fitXY"
                         android:layout_width="120dp"
                         android:layout_height="140dp"
-                        android:src="@drawable/home_scr1" />
+                        android:src="@drawable/yuehua" />
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -252,7 +252,7 @@
                         android:scaleType="fitXY"
                         android:layout_width="120dp"
                         android:layout_height="140dp"
-                        android:src="@drawable/home_scr1"/>
+                        android:src="@drawable/yuehua"/>
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -280,7 +280,7 @@
                         android:scaleType="fitXY"
                         android:layout_width="120dp"
                         android:layout_height="140dp"
-                        android:src="@drawable/home_scr1"/>
+                        android:src="@drawable/yuehua"/>
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -312,7 +312,7 @@
                         android:scaleType="fitXY"
                         android:layout_width="120dp"
                         android:layout_height="140dp"
-                        android:src="@drawable/home_scr1" />
+                        android:src="@drawable/yuehua" />
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -339,7 +339,7 @@
                         android:scaleType="fitXY"
                         android:layout_width="120dp"
                         android:layout_height="140dp"
-                        android:src="@drawable/home_scr1"/>
+                        android:src="@drawable/yuehua"/>
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -367,7 +367,7 @@
                         android:scaleType="fitXY"
                         android:layout_width="120dp"
                         android:layout_height="140dp"
-                        android:src="@drawable/home_scr1"/>
+                        android:src="@drawable/yuehua"/>
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
