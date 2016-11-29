@@ -18,35 +18,28 @@
     android:paddingBottom="0dp"
     android:paddingLeft="0dp"
     android:paddingRight="0dp"
-    android:paddingTop="5dp"
+    android:paddingTop="0dp"
     tools:context="com.example.administrator.missphoto.MainActivity">
 
 
     <!--标题部分-->
     <LinearLayout
-
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:orientation="horizontal"
-        android:background="@drawable/yuanjiao">
-
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
         <ImageButton
-            android:background="#fff"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
             android:src="@drawable/btn_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="7dp"
-            android:id="@+id/btn_back"
-            />
+            android:background="#ffffff"/>
         <TextView
-            android:text="MissPhoto"
-            android:textSize="20dp"
-            android:gravity="center"
-            android:textColor="#8F8F8F"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/tv_title"
-            android:paddingRight="24dp"/>
+            android:layout_height="50dp"
+            android:text="MissPhoto"
+            android:textSize="18dp"
+            android:paddingLeft="100dp"
+            android:paddingTop="10dp"
+            android:background="#ffffff"/>
     </LinearLayout>
 
 

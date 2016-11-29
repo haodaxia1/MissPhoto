@@ -12,7 +12,7 @@
         android:id="@+id/contaner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="5">
+        android:layout_weight="200">
     </FrameLayout>
     <LinearLayout
         android:layout_width="match_parent"
