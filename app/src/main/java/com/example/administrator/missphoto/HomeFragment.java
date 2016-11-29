@@ -14,7 +14,7 @@ import android.widget.ViewFlipper;
 
 public class HomeFragment extends Fragment {
     private ViewFlipper flipper;
-    private int[] resId = {R.drawable.yuepai, R.drawable.yuehua, R.drawable.shili1};
+    private int[] resId = {R.drawable.yuepai, R.drawable.yuehua, R.drawable.shili4};
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
