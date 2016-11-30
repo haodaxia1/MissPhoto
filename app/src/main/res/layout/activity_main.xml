@@ -32,8 +32,8 @@
                 android:layout_gravity="center"
                 android:background="#00000000"
                 android:scaleType="fitXY"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:id="@+id/btn_home"
                 android:src="@drawable/fraghome"/>
             <TextView
@@ -56,8 +56,8 @@
                 android:layout_gravity="center"
                 android:background="#00000000"
                 android:scaleType="fitXY"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:id="@+id/btn_camera"
                 android:src="@drawable/fragcamera"/>
             <TextView
@@ -79,8 +79,8 @@
                 android:layout_gravity="center"
                 android:background="#00000000"
                 android:scaleType="fitXY"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:id="@+id/btn_post"
                 android:src="@drawable/fragpost"/>
             <TextView
@@ -102,8 +102,8 @@
                 android:layout_gravity="center"
                 android:background="#00000000"
                 android:scaleType="fitXY"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:id="@+id/btn_request"
                 android:src="@drawable/fragrequest"/>
             <TextView
@@ -125,8 +125,8 @@
                 android:layout_gravity="center"
                 android:background="#00000000"
                 android:scaleType="fitXY"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:id="@+id/btn_mine"
                 android:src="@drawable/fragmine"/>
             <TextView
