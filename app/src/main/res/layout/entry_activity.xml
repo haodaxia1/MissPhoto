@@ -43,7 +43,6 @@
            android:layout_width="match_parent"
            android:hint=" 联系方式："
            android:gravity="top"
-           
            android:layout_height="150dp" />
 
    </LinearLayout>
