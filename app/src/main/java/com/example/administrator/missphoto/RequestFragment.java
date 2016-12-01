@@ -38,14 +38,6 @@ public class RequestFragment extends Fragment {
         return view;
     }
 
-/*    @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-
-
-
-    }*/
-
     private void getData() {
         lRequest.add(new Requset(0L,R.drawable.touxiang3,"喵星狗宠物店老版","构图较完美。整个作品看起来均衡、稳定、有规律。有明显的视觉美。","2016-1-1"));
         lRequest.add(new Requset(1L,R.drawable.touxiang1,"神经病摄影店","轮廓清晰，主体突出，线条分明","2016-12-19"));

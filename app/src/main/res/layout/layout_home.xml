@@ -50,15 +50,25 @@
             android:layout_height="190dp">
         </ViewFlipper>
         <!--最新约稿栏目代码-->
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:text="最新约稿"
-            android:textSize="20dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:paddingTop="5dp"
-            android:paddingLeft="3dp"
-            android:background="#ffffff"/>
+            android:orientation="horizontal"
+            android:background="#ffffff">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:src="@drawable/bar"
+                android:paddingTop="9dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="最新约稿"
+                android:textSize="20dp"
+                android:paddingTop="5dp"
+                android:paddingLeft="2dp" />
+        </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -75,7 +85,7 @@
                     android:text="500、"
                     android:textSize="18dp"
                     android:paddingTop="8dp"
-                    android:paddingLeft="3dp"/>
+                    android:paddingLeft="5dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
@@ -92,7 +102,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="需求详情："
-                    android:paddingLeft="3dp"/>
+                    android:paddingLeft="5dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -107,7 +117,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="联系方式："
-                    android:paddingLeft="3dp"/>
+                    android:paddingLeft="5dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -122,7 +132,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="发布时间："
-                    android:paddingLeft="3dp"/>
+                    android:paddingLeft="5dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -140,7 +150,7 @@
                     android:text="500、"
                     android:textSize="18dp"
                     android:paddingTop="8dp"
-                    android:paddingLeft="3dp"/>
+                    android:paddingLeft="5dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
@@ -157,7 +167,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="需求详情："
-                    android:paddingLeft="3dp"/>
+                    android:paddingLeft="5dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -172,7 +182,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="联系方式："
-                    android:paddingLeft="3dp"/>
+                    android:paddingLeft="5dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -187,7 +197,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="发布时间："
-                    android:paddingLeft="3dp"/>
+                    android:paddingLeft="5dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -195,15 +205,25 @@
             </LinearLayout>
         </LinearLayout>
         <!--点赞榜栏目代码-->
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:text="点赞榜"
-            android:textSize="20dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:paddingTop="5dp"
-            android:paddingLeft="3dp"
-            android:background="#ffffff"/>
+            android:orientation="horizontal"
+            android:background="#ffffff">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:src="@drawable/bar"
+                android:paddingTop="9dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="点赞榜"
+                android:textSize="20dp"
+                android:paddingTop="5dp"
+                android:paddingLeft="2dp" />
+        </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
