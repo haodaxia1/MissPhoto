@@ -19,7 +19,7 @@ public class Begin extends Activity {
         final View view = View.inflate(this, R.layout.loyout_begin, null);
         setContentView(view);
 
-        //渐变展示启动屏
+        //渐变展示启动屏，可改变图片
         AlphaAnimation aa = new AlphaAnimation(0.3f,1.0f);
         aa.setDuration(2000);
         view.startAnimation(aa);
