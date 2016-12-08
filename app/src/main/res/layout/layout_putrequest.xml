@@ -47,7 +47,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="发布"
+            android:text="发布需求"
             android:id="@+id/btn_publish"
             android:background="@drawable/yuanjiao"
             android:layout_gravity="center"
