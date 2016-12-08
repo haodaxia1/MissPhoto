@@ -14,6 +14,11 @@ import android.widget.LinearLayout;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
+import cn.smssdk.EventHandler;
+import cn.smssdk.SMSSDK;
+import cn.smssdk.gui.CommonDialog;
+import cn.smssdk.gui.ContactsPage;
+import cn.smssdk.gui.RegisterPage;
 
 public class MainActivity extends Activity {
 
