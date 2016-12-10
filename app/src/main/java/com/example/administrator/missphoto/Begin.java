@@ -40,7 +40,7 @@ public class Begin extends Activity {
     }
 
     /**
-     * 跳转到...
+     * 跳转到.。
      */
     private void redirectTo(){
         Intent intent = new Intent(this, MainActivity.class);
