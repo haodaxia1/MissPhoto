@@ -7,4 +7,7 @@
         android:color="@color/colorPrimaryDarkzs" />
     <size android:width="15dp"
         android:height="15dp" />
+    <stroke
+        android:width="0.3dp"
+        android:color="@color/colorAccentzs"/>
 </shape>
