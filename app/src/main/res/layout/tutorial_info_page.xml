@@ -78,7 +78,7 @@
                 android:text="跳过"
                 android:textSize="20dp"
                  android:background="@drawable/shape1"
-                android:textColor="#716d6d" />
+                android:textColor="#323232" />
             </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
