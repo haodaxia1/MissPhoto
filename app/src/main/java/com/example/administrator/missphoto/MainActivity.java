@@ -3,6 +3,9 @@ package com.example.administrator.missphoto;
 import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,10 +13,16 @@ import android.view.View;
 import android.view.Window;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
+import cn.smssdk.EventHandler;
+import cn.smssdk.SMSSDK;
+import cn.smssdk.gui.CommonDialog;
+import cn.smssdk.gui.ContactsPage;
+import cn.smssdk.gui.RegisterPage;
 
 public class MainActivity extends Activity {
 
@@ -49,7 +58,18 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
+        //判断是否为下载后第一次打开程序
+        SharedPreferences googleActivitySP = getSharedPreferences("Tutorial", Context.MODE_PRIVATE);
+        boolean firstStart = googleActivitySP.getBoolean("first_start", true);
+        if(firstStart == true){
 
+            Intent intent = new Intent(this, TutorialIntroPageActivity.class);
+            startActivity(intent);
+
+            Toast.makeText(this, "Tutorial first start", Toast.LENGTH_SHORT).show();
+            SharedPreferences.Editor edit = googleActivitySP.edit();
+            edit.putBoolean("first_start", false);
+            edit.commit();}
         //1. 获取界面的控件
         getViews();
 
@@ -77,6 +97,9 @@ public class MainActivity extends Activity {
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
+
+
+
     }
 
     //获取界面的控件
