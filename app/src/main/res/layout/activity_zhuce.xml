@@ -42,7 +42,7 @@
             android:id="@+id/btn_touxiang"
             android:background="#fff"
             android:layout_gravity="center"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="30dp"
             />
         <LinearLayout
             android:layout_width="330dp"
@@ -50,13 +50,14 @@
             android:layout_gravity="center"
             android:orientation="vertical"
             android:background="@drawable/zhijiao"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="40dp">
             <EditText
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/yuanjiao"
+                android:id="@+id/zhuce_user"
                 android:layout_gravity="center"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="30dp"
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp"
                 android:hint="昵称："
@@ -66,61 +67,22 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/yuanjiao"
                 android:layout_gravity="center"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:id="@+id/zhuce_password"
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp"
-                android:hint="描述："/>
-            <EditText
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/yuanjiao"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:paddingTop="5dp"
-                android:paddingBottom="5dp"
-                android:hint="联系方式："
+                android:hint="请输入密码："
                 android:gravity="top"/>
-            <LinearLayout
-                android:layout_width="300dp"
-                android:layout_height="100dp"
-                android:orientation="vertical"
-                android:background="@drawable/yuanjiao"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp">
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="发布需求："
-                    android:background="@null"
-                    android:layout_marginTop="10dp"
-                    android:gravity="top"
-                    android:layout_gravity="top"/>
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="发布"
-                    android:id="@+id/btn_publish"
-                    android:background="@drawable/yuanjiao"
-                    android:layout_gravity="right"
-                    android:layout_marginTop="30dp"/>
 
-            </LinearLayout>
         </LinearLayout>
-        <Button
-            android:layout_width="330dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/yuanjiao"
-            android:text="上传摄影作品"
-            android:layout_marginTop="10dp"
-            android:layout_gravity="center"
-            android:id="@+id/btn_upload"/>
+
         <Button
             android:layout_width="330dp"
             android:layout_height="wrap_content"
             android:background="@drawable/yuanjiao"
             android:text="注册"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="30dp"
             android:layout_gravity="center"
             android:id="@+id/btn_ok"/>
     </LinearLayout>
