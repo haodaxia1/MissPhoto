@@ -34,10 +34,11 @@ public class GettimeActivity extends AppCompatActivity {
         second=c.get(Calendar.SECOND);
         editText=(EditText)findViewById(R.id.edtext) ;
         button=(Button)findViewById(R.id.btn);
+        final int Month = month+1;
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                editText.setText(year+"-"+month+"-"+day+"\t"+hour+":"+minute+":"+second);
+                editText.setText(year+"-"+Month+"-"+day+"\t"+hour+":"+minute+":"+second);
             }
         });
     }

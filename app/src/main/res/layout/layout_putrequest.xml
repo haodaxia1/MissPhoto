@@ -7,6 +7,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:orientation="vertical"
+        android:background="@drawable/zhijiao"
         android:layout_marginTop="20dp">
         <EditText
             android:layout_width="320dp"
@@ -37,20 +38,22 @@
         </LinearLayout>
         <Button
             android:id="@+id/btn"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="获取时间"/>
+            android:layout_gravity="center"
+            android:background="@drawable/yuanjiao"
+            android:text="点击这里登记时间呦"/>
         <EditText
             android:id="@+id/edtext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="发布"
-            android:id="@+id/btn_publish"
-            android:background="@drawable/yuanjiao"
-            android:layout_gravity="center"
-            android:layout_marginTop="30dp"/>
     </LinearLayout>
+    <Button
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:text="发布"
+        android:id="@+id/btn_publish"
+        android:background="@drawable/yuanjiao"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"/>
 </LinearLayout>
