@@ -239,20 +239,26 @@ public class MainActivity extends Activity {
                     mBtnPost.setImageResource(image0[2]);
                     mBtnRequest.setImageResource(image0[3]);
                     mBtnMine.setImageResource(image0[4]);
-
+                    //跳转页面代码修改
+                    //实现点击按钮调用相册的功能
+                    //编写：安东
+                    //日期：2016.12.16
                     transaction.replace(R.id.contaner, mCamera);
                     break;
                 case R.id.btn_post:
-                    if (mPost == null) {
-                        mPost = new PostFragment();
-                    }
-                    //3. 设置页面
-                    mBtnPost.setImageResource(image1[2]);
-                    mBtnHome.setImageResource(image0[0]);
-                    mBtnCamera.setImageResource(image0[1]);
-                    mBtnRequest.setImageResource(image0[3]);
-                    mBtnMine.setImageResource(image0[4]);
-                    transaction.replace(R.id.contaner, mPost);
+//                    Intent intent=new Intent(MainActivity.this,TakephotoActivity.class);
+//                    startActivity(intent);
+//                    if (mPost == null) {
+//                        mPost = new PostFragment();
+//                    }
+//                    //3. 设置页面
+//                    mBtnPost.setImageResource(image1[2]);
+//                    mBtnHome.setImageResource(image0[0]);
+//                    mBtnCamera.setImageResource(image0[1]);
+//                    mBtnRequest.setImageResource(image0[3]);
+//                    mBtnMine.setImageResource(image0[4]);
+//                    transaction.replace(R.id.contaner, mPost);
+                    //跳转页面代码修改结尾
                     break;
                 case R.id.btn_request:
                     if (mRequest == null) {
