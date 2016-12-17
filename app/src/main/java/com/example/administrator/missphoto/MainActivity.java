@@ -246,8 +246,8 @@ public class MainActivity extends Activity {
                     transaction.replace(R.id.contaner, mCamera);
                     break;
                 case R.id.btn_post:
-//                    Intent intent=new Intent(MainActivity.this,TakephotoActivity.class);
-//                    startActivity(intent);
+                    Intent intent=new Intent(MainActivity.this,TakephotoActivity.class);
+                    startActivity(intent);
 //                    if (mPost == null) {
 //                        mPost = new PostFragment();
 //                    }
