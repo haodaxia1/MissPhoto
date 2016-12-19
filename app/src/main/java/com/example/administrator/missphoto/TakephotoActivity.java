@@ -23,9 +23,13 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+<<<<<<< HEAD
 //实现点击按钮调用相册的功能
 //编写：安东
 //日期：2016.12.16
+=======
+
+>>>>>>> origin/master
 public class TakephotoActivity extends AppCompatActivity {
 
     private GridView gridView1;              //网格显示缩略图
