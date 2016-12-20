@@ -68,13 +68,11 @@
                 android:background="@drawable/yuanjiao"
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp"
-
                 android:id="@+id/zhuce_password"
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp"
                 android:hint="请输入密码："
                 android:gravity="top"/>
-
             <EditText
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
@@ -98,6 +96,14 @@
             android:layout_marginTop="30dp"
             android:layout_gravity="center"
             android:id="@+id/btn_ok"/>
+        <Button
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/yuanjiao"
+            android:text="登录"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            android:id="@+id/btn_zhuce_entry"/>
     </LinearLayout>
 
 
