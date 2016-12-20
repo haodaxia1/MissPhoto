@@ -17,15 +17,14 @@ import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-//实现点击按钮调用相册的功能
-//编写：安东
-//日期：2016.12.16
+
 public class TakephotoActivity extends AppCompatActivity {
 
     private GridView gridView1;              //网格显示缩略图
@@ -35,16 +34,26 @@ public class TakephotoActivity extends AppCompatActivity {
     private Bitmap bmp;                      //导入临时图片
     private ArrayList<HashMap<String, Object>> imageItem;
     private SimpleAdapter simpleAdapter;     //适配器
+    private ImageButton imagebutton1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_takephoto);
+        imagebutton1=(ImageButton)findViewById(R.id.btn_post_request) ;
+        imagebutton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent();
+                intent.setClass(TakephotoActivity.this,GettimeActivity.class);
+                startActivity(intent);
+            }
+        });
         /*
          * 防止键盘挡住输入框
          * 不希望遮挡设置activity属性 android:windowSoftInputMode="adjustPan"
          * 希望动态调整高度 android:windowSoftInputMode="adjustResize"
          */
-        getWindow().setSoftInputMode(WindowManager.LayoutParams.
+       getWindow().setSoftInputMode(WindowManager.LayoutParams.
                 SOFT_INPUT_ADJUST_PAN);
 
         //锁定屏幕
@@ -200,4 +209,15 @@ public class TakephotoActivity extends AppCompatActivity {
         });
         builder.create().show();
     }
+    //监听需求按钮，跳转到需求提交页面
+  /*  imagebutton1=(ImageButton)findViewById(R.id.imagebutton1);
+    imagebutton1.setOnClickListener(new AdapterView.OnItemClickListener() {
+        @Override
+        public void onClick(View v) {
+            //在按钮响应函数中添加如下两句话就ok了
+            Intent intent=new Intent(MainActivity.this,GettimeActivity.class);
+            startActivity(intent);
+
+        }
+    });*/
 }
