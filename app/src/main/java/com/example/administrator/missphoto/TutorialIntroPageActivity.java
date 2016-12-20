@@ -216,7 +216,8 @@ public class TutorialIntroPageActivity extends Activity implements OnTouchListen
 
         @Override
         public boolean onScroll(MotionEvent arg0, MotionEvent arg1, float arg2,
-                                float arg3) {
+                                float arg3)
+        {
             // TODO Auto-generated method stub
             return false;
         }
