@@ -36,6 +36,7 @@ public class ZhuceActivity extends Activity {
     private EditText passWord;
     private EditText uaccount;
     private Button btn_zhuce_entry;
+    //
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
