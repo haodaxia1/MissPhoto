@@ -66,7 +66,6 @@ public class MainActivity extends Activity {
             Intent intent = new Intent(this, TutorialIntroPageActivity.class);
             startActivity(intent);
 
-            Toast.makeText(this, "Tutorial first start", Toast.LENGTH_SHORT).show();
             SharedPreferences.Editor edit = googleActivitySP.edit();
             edit.putBoolean("first_start", false);
             edit.commit();}
