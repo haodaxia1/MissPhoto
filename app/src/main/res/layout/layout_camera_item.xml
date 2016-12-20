@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:background="@color/colorPrimaryDarkzs"
-    android:layout_marginLeft="16dp"
-    android:layout_marginRight="16dp"
-    android:layout_marginTop="16dp"
+    android:background="#eaf8fd"
+    android:layout_marginLeft="0dp"
+    android:layout_marginRight="0dp"
+    android:layout_marginTop="0dp"
     android:layout_height="match_parent">
 
     <RelativeLayout
+        android:background="#ffffff"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <ImageView
@@ -16,7 +18,7 @@
             android:layout_height="33dp"
             android:layout_margin="8dp"
             android:src="@drawable/touxiang1"
-             />
+            />
         <TextView
             android:id="@+id/TvCameraitemName"
             android:layout_width="wrap_content"
@@ -39,6 +41,7 @@
     </RelativeLayout>
 
     <ImageView
+        android:background="#ffffff"
         android:id="@+id/IvCameraitemImage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -46,44 +49,64 @@
         android:layout_marginTop="1dp"
         android:src="@drawable/shili5"/>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
-        <Button
-            android:layout_width="118dp"
-            android:layout_height="23dp"
-            android:paddingLeft="4dp"
-            android:background="@drawable/yuanjiao"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="5dp"
-            android:drawableLeft="@drawable/liked"
-            android:scaleType="fitXY"
-            android:text="91位用户点赞">
-        </Button>
-        <Button
-            android:layout_width="62dp"
-            android:layout_height="23dp"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="8dp"
-            android:paddingLeft="4dp"
-            android:background="@drawable/yuanjiao"
-            android:layout_marginTop="5dp"
-            android:drawableLeft="@drawable/like"
-            android:text="点赞"
-            >
-        </Button>
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
-        <EditText
-            android:id="@+id/EtCameraitemComment"
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="#ffffff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:background="@drawable/yuanjiao"
-            android:hint="请输入您的评论"/>
-    </RelativeLayout>
+            android:layout_marginTop="30dp">
+
+            <TextView
+                android:layout_width="118dp"
+                android:layout_height="23dp"
+                android:paddingLeft="4dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/liked"
+                android:scaleType="fitXY"
+                android:gravity="center_vertical"
+                android:text="91">
+            </TextView>
+
+            <Button
+                android:layout_width="62dp"
+                android:layout_height="23dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"
+                android:paddingLeft="4dp"
+                android:background="@drawable/yuanjiao"
+                android:layout_marginTop="5dp"
+                android:drawableLeft="@drawable/like"
+                android:text="点赞"
+                >
+            </Button>
+        </RelativeLayout>
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:id="@+id/tv_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="用户名称："
+                android:textColor="#8CAD37"/>
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:id="@+id/tv_user_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="请输入您的评论"/>
+        </LinearLayout>
+
+    </LinearLayout>
 </LinearLayout>

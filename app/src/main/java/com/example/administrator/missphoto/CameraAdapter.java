@@ -47,12 +47,18 @@ public class CameraAdapter extends BaseAdapter {
         }
         ImageView IvHeadportrait = (ImageView) view.findViewById(R.id.IvCameraitemHeadportrait);
         IvHeadportrait.setImageResource(cameraList.get(i).getHeadPortrait());
+
         TextView TvName = (TextView) view.findViewById(R.id.TvCameraitemName);
         TvName.setText(cameraList.get(i).getName());
+
         ImageView IvImage = (ImageView) view.findViewById(R.id.IvCameraitemImage);
         IvImage.setImageResource(cameraList.get(i).getImage());
-        EditText EtComment = (EditText) view.findViewById(R.id.EtCameraitemComment);
-        EtComment.setText(cameraList.get(i).getComment());
+
+        TextView TvUsername = (TextView) view.findViewById(R.id.tv_user_name);
+        TvUsername.setText(cameraList.get(i).getUserName());
+
+        TextView TvUserComment = (TextView) view.findViewById(R.id.tv_user_comment);
+        TvUserComment.setText(cameraList.get(i).getUserComment());
         return view;
     }
 }

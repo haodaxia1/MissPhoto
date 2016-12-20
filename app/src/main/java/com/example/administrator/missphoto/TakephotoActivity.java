@@ -1,5 +1,6 @@
 package com.example.administrator.missphoto;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -25,7 +26,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class TakephotoActivity extends AppCompatActivity {
+public class TakephotoActivity extends Activity {
 
     private GridView gridView1;              //网格显示缩略图
     private Button buttonPublish;            //发布按钮
