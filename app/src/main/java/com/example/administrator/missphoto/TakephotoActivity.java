@@ -45,6 +45,7 @@ public class TakephotoActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent=new Intent();
                 intent.setClass(TakephotoActivity.this,GettimeActivity.class);
+                startActivity(intent);
             }
         });
         /*
