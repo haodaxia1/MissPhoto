@@ -38,7 +38,7 @@
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/touxiang1"
+            android:src="@mipmap/touxiang1"
             android:id="@+id/btn_touxiang"
             android:background="#fff"
             android:layout_gravity="center"
@@ -96,14 +96,7 @@
             android:layout_marginTop="30dp"
             android:layout_gravity="center"
             android:id="@+id/btn_ok"/>
-        <Button
-            android:layout_width="330dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/yuanjiao"
-            android:text="登录"
-            android:layout_marginTop="30dp"
-            android:layout_gravity="center"
-            android:id="@+id/btn_zhuce_entry"/>
+
     </LinearLayout>
 
 
