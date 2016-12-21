@@ -36,7 +36,7 @@
             android:layout_marginRight="8dp"
             android:layout_marginTop="15dp"
             android:drawableLeft="@drawable/userme"
-            android:text="关注">
+            android:text="关注 ">
         </Button>
     </RelativeLayout>
 
