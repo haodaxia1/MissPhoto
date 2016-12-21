@@ -166,7 +166,7 @@ public class TutorialIntroPageActivity extends Activity implements OnTouchListen
 
         @Override
         public void onClick(View arg0) {
-            Intent intent = new Intent(TutorialIntroPageActivity.this, MainActivity.class);
+            Intent intent = new Intent(TutorialIntroPageActivity.this, FirstActivity.class);
             if(getIntent().getParcelableExtra(Intent.EXTRA_INTENT) != null){
                 intent.putExtra(Intent.EXTRA_INTENT, getIntent().getParcelableExtra(Intent.EXTRA_INTENT));
             }
