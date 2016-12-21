@@ -58,18 +58,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
-        //判断是否为下载后第一次打开程序
-        SharedPreferences googleActivitySP = getSharedPreferences("Tutorial", Context.MODE_PRIVATE);
-        boolean firstStart = googleActivitySP.getBoolean("first_start", true);
-        if(firstStart == true){
 
-            Intent intent = new Intent(this, TutorialIntroPageActivity.class);
-            startActivity(intent);
-
-            Toast.makeText(this, "Tutorial first start", Toast.LENGTH_SHORT).show();
-            SharedPreferences.Editor edit = googleActivitySP.edit();
-            edit.putBoolean("first_start", false);
-            edit.commit();}
         //1. 获取界面的控件
         getViews();
 

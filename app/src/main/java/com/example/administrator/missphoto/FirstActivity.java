@@ -1,7 +1,9 @@
 package com.example.administrator.missphoto;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -49,6 +51,17 @@ public class FirstActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
+        //判断是否为下载后第一次打开程序
+        SharedPreferences googleActivitySP = getSharedPreferences("Tutorial", Context.MODE_PRIVATE);
+        boolean firstStart = googleActivitySP.getBoolean("first_start", true);
+        if(firstStart == true){
+
+            Intent intent = new Intent(this, TutorialIntroPageActivity.class);
+            startActivity(intent);
+
+            SharedPreferences.Editor edit = googleActivitySP.edit();
+            edit.putBoolean("first_start", false);
+            edit.commit();}
         userName=(EditText)findViewById(R.id.first_username);
         passWord=(EditText)findViewById(R.id.first_password);
         btn_zhuce_entry=(Button)findViewById(R.id.btn_first_entry);
