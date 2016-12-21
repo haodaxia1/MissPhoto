@@ -46,8 +46,9 @@
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:paddingLeft="10dp"
+            android:paddingRight="10dp"
             android:paddingTop="5dp"
-            android:background="@drawable/textview_border"
+            android:background="@drawable/zhijiao"
             android:hint="具体要求:"
             android:gravity="top"/>
 
@@ -57,7 +58,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
-            android:background="@drawable/textview_border"
             android:gravity="end"
             android:paddingRight="30dp"
             android:layout_marginBottom="3dp"
