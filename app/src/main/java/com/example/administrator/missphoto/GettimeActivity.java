@@ -62,17 +62,17 @@ public class GettimeActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         try {
-                            urlRequestPath = "http://172.16.16.100/request/?obj=4&ruid="+ruId.getText().toString()
+                            urlRequestPath = "http://192.168.163.1/request/?obj=4&ruid="+ruId.getText().toString()
                                                 +"&rdetail="+ URLEncoder.encode(requestContent.getText().toString(),"UTF-8")
-                                                +"&rdate="+editText.getText().toString();
+                                                +"&rdate="+URLEncoder.encode(editText.getText().toString(),"UTF-8");
 
                             url = new URL(urlRequestPath);
 
-                            HttpURLConnection coon = (HttpURLConnection)url.openConnection();
+                            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 
-                            if (coon.getResponseCode() == 200){
+                            if (conn.getResponseCode() == 200){
                                 //获得服务器响应数据
-                                BufferedReader in = new BufferedReader(new InputStreamReader(coon.getInputStream(),"UTF-8"));
+                                BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream(),"UTF-8"));
                                 //数据
                                 String retData = null;
                                 String responseData = "";
@@ -80,13 +80,12 @@ public class GettimeActivity extends AppCompatActivity {
                                     responseData += retData;
                                 }
                                 in.close();
+                                Intent  i = new Intent();
+                                i.setClass(GettimeActivity.this,TakephotoActivity.class);
+                                startActivity(i);
 
                             }
-                        } catch (UnsupportedEncodingException e) {
-                            e.printStackTrace();
-                        } catch (MalformedURLException e) {
-                            e.printStackTrace();
-                        } catch (IOException e) {
+                        } catch (Exception e) {
                             e.printStackTrace();
                         }
                     }
