@@ -28,11 +28,13 @@
             android:textColor="#000000"
             android:textSize="20sp" />
 
-        <Button
-            android:id="@+id/btn_fx"
-            android:layout_width="50dp"
+        <ImageView
+
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:background="@drawable/fenxiang"/>
+            android:layout_weight="1"
+            android:padding="8dp"
+            />
     </LinearLayout>
 
 </RelativeLayout>
