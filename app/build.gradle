@@ -32,4 +32,5 @@ dependencies {
     compile name: 'SMSSDKGUI-2.1.2', ext: 'aar'
     compile files('libs/MobCommons-2016.1012.1447.jar')
     compile files('libs/MobTools-2016.1012.1447.jar')
+    compile files('libs/ShareSDK-Core-2.7.10.jar')
 }
