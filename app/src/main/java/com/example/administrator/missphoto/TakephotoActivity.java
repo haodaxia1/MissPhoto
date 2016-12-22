@@ -36,6 +36,8 @@ public class TakephotoActivity extends Activity {
     private ArrayList<HashMap<String, Object>> imageItem;
     private SimpleAdapter simpleAdapter;     //适配器
     private ImageButton imagebutton1;
+    private ImageButton btn_back;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +51,16 @@ public class TakephotoActivity extends Activity {
                 startActivity(intent);
             }
         });
+        btn_back=(ImageButton)findViewById(R.id.btn_back1);
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent();
+                i.setClass(TakephotoActivity.this, MainActivity.class);
+                startActivity(i);
+            }
+        });
+
         /*
          * 防止键盘挡住输入框
          * 不希望遮挡设置activity属性 android:windowSoftInputMode="adjustPan"

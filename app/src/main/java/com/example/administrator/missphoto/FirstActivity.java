@@ -30,6 +30,7 @@ public class FirstActivity extends Activity {
     private EditText userName;
     private EditText passWord;
     private Button btn_zhuce_entry;
+    private Button btn_first_ok;
 
     Handler handler2 = new Handler()
     {
@@ -45,7 +46,7 @@ public class FirstActivity extends Activity {
             }
         }
     };
-    private Button btn_ok;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,8 +66,8 @@ public class FirstActivity extends Activity {
         userName=(EditText)findViewById(R.id.first_username);
         passWord=(EditText)findViewById(R.id.first_password);
         btn_zhuce_entry=(Button)findViewById(R.id.btn_first_entry);
-        btn_ok=(Button)findViewById(R.id.btn_first_ok);
-        btn_ok.setOnClickListener(new View.OnClickListener() {
+        btn_first_ok=(Button)findViewById(R.id.btn_first_ok);
+        btn_first_ok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent();
@@ -79,7 +80,7 @@ public class FirstActivity extends Activity {
             @Override
             public void onClick(View view) {
                 try {
-                    urlPath2 = "http://192.168.163.1/user/?obj=1&upwd="+passWord.getText().toString()
+                    urlPath2 = "http://10.7.88.111:8080/user/?obj=1&upwd="+passWord.getText().toString()
                             +"&uname="+URLEncoder.encode(userName.getText().toString(),"UTF-8");
                 } catch (UnsupportedEncodingException e) {
                     e.printStackTrace();

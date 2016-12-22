@@ -35,8 +35,7 @@ public class ZhuceActivity extends Activity {
     private EditText userName;
     private EditText passWord;
     private EditText uaccount;
-    private Button btn_zhuce_entry;
-    //
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,12 +45,12 @@ public class ZhuceActivity extends Activity {
         userName=(EditText)findViewById(R.id.zhuce_user);
         passWord=(EditText)findViewById(R.id.zhuce_password);
         uaccount=(EditText)findViewById(R.id.zhuce_uaccount);
-        btn_back=(ImageButton)findViewById(R.id.btn_back);
+        btn_back=(ImageButton)findViewById(R.id.btn_back1);
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i=new Intent();
-                i.setClass(ZhuceActivity.this, MainActivity.class);
+                i.setClass(ZhuceActivity.this, FirstActivity.class);
                 startActivity(i);
             }
         });
@@ -81,7 +80,7 @@ public class ZhuceActivity extends Activity {
                                         try
                                         {
 
-                                            urlPath = "http://192.168.163.1/user/?obj=0&upwd="+passWord.getText().toString()
+                                            urlPath = "http://10.7.88.111:8080/user/?obj=0&upwd="+passWord.getText().toString()
                                                     +"&uname="+URLEncoder.encode(userName.getText().toString(),"UTF-8")
                                                     +"&uaccount="+URLEncoder.encode(uaccount.getText().toString(),"UTF-8");
 

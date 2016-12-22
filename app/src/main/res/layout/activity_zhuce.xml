@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/btn_back"
             android:background="#fff"
-            android:id="@+id/btn_back"/>
+            android:id="@+id/btn_back1"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -45,14 +45,14 @@
             android:layout_marginTop="30dp"
             />
         <LinearLayout
-            android:layout_width="330dp"
+            android:layout_width="335dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:orientation="vertical"
             android:background="@drawable/zhijiao"
             android:layout_marginTop="40dp">
             <EditText
-                android:layout_width="300dp"
+                android:layout_width="320dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/yuanjiao"
                 android:id="@+id/zhuce_user"
@@ -63,7 +63,7 @@
                 android:hint="昵称："
                 />
             <EditText
-                android:layout_width="300dp"
+                android:layout_width="320dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/yuanjiao"
                 android:layout_gravity="center"
@@ -74,7 +74,7 @@
                 android:hint="请输入密码："
                 android:gravity="top"/>
             <EditText
-                android:layout_width="300dp"
+                android:layout_width="320dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/yuanjiao"
                 android:layout_gravity="center"
@@ -89,7 +89,7 @@
         </LinearLayout>
 
         <Button
-            android:layout_width="330dp"
+            android:layout_width="335dp"
             android:layout_height="wrap_content"
             android:background="@drawable/yuanjiao"
             android:text="注册"
