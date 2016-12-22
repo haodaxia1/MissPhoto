@@ -5,19 +5,14 @@ package com.example.administrator.missphoto;
  */
 
 public class Camera {
+
     private Long id;
     private int headPortrait;   //头像
     private String name;    //昵称
     private int image;  //作品图片
-    private String comment; //评论
-
-    public Camera(Long id, int headPortrait, String name, int image, String comment) {
-        this.id = id;
-        this.headPortrait = headPortrait;
-        this.name = name;
-        this.image = image;
-        this.comment = comment;
-    }
+    private int like;//作品点赞数
+    private String userName; //用户名
+    private String userComment; //用户评论
 
     public Long getId() {
         return id;
@@ -51,11 +46,38 @@ public class Camera {
         this.image = image;
     }
 
-    public String getComment() {
-        return comment;
+    public int getLike() {
+        return like;
     }
 
-    public void setComment(String comment) {
-        this.comment = comment;
+    public void setLike(int like) {
+        this.like = like;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getUserComment() {
+        return userComment;
+    }
+
+    public void setUserComment(String userComment) {
+        this.userComment = userComment;
+    }
+
+    public Camera(Long id, int headPortrait, String name, int image, int like, String userName, String userComment) {
+        this.id = id;
+        this.headPortrait = headPortrait;
+        this.name = name;
+        this.image = image;
+        this.like = like;
+
+        this.userName = userName;
+        this.userComment = userComment;
     }
 }

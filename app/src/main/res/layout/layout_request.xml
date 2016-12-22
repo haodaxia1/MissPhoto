@@ -13,7 +13,7 @@
         android:id="@+id/LvReqAdpview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:dividerHeight="3dp"></ListView>
+        android:dividerHeight="5dp"></ListView>
 
 
 </LinearLayout>
