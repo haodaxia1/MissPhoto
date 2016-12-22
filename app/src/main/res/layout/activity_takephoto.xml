@@ -16,6 +16,7 @@
         android:gravity="center"
         android:textSize="40dp"
         android:textColor="#f6c515" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -66,6 +67,7 @@
                 android:text="需求"
                 android:textSize="17dp"
                 android:layout_marginTop="6dp"/>
+
         </LinearLayout>
 
     </LinearLayout>

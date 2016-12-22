@@ -210,6 +210,7 @@ public class TakephotoActivity extends Activity {
         });
         builder.create().show();
     }
+
     //监听需求按钮，跳转到需求提交页面
   /*  imagebutton1=(ImageButton)findViewById(R.id.imagebutton1);
     imagebutton1.setOnClickListener(new AdapterView.OnItemClickListener() {

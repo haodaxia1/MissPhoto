@@ -79,7 +79,7 @@ public class FirstActivity extends Activity {
             @Override
             public void onClick(View view) {
                 try {
-                    urlPath2 = "http://192.168.163.1/user/?obj=1&upwd="+passWord.getText().toString()
+                    urlPath2 = "http://10.7.88.111:8080/user/?obj=1&upwd="+passWord.getText().toString()
                             +"&uname="+URLEncoder.encode(userName.getText().toString(),"UTF-8");
                 } catch (UnsupportedEncodingException e) {
                     e.printStackTrace();
