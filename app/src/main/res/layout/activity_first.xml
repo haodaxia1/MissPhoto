@@ -35,7 +35,7 @@
         android:background="@drawable/yuanjiao"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:hint="请输入用户名："
+        android:hint="请输入密码："
         android:id="@+id/first_password"
         />
     <Button
