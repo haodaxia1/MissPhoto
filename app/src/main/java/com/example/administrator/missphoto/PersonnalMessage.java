@@ -44,13 +44,6 @@ import java.util.Map;
 import cn.sharesdk.onekeyshare.OnekeyShare;
 
 public class PersonnalMessage extends FirstActivity {
-    private GridView gridView1;              //网格显示缩略图
-    private Button buttonPublish;            //发布按钮
-    private final int IMAGE_OPEN = 1;        //打开图片标记
-    private String pathImage;                //选择图片路径
-    private Bitmap bmp;                      //导入临时图片
-    private ArrayList<HashMap<String, Object>> imageItem;
-    private SimpleAdapter simpleAdapter;     //适配器
     private String urlPath2;
     private URL url;
     private EditText passWord;
@@ -63,18 +56,22 @@ public class PersonnalMessage extends FirstActivity {
     private TextView fanhui;
     private TextView fenxiang;
     private TextView tuichu;
-    private ImageButton personnal_touxiang;
+    private ImageView personnal_touxiang;
+    private TextView change;
+    private static final int IMAGE = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.personnal_message);
-        personnal_touxiang = (ImageButton) findViewById(R.id.personal_touxiang);
+        personnal_touxiang = (ImageView) findViewById(R.id.personal_touxiang);
         uaccount = (TextView) findViewById(R.id.personal_uaccount);
         uname = (TextView) findViewById(R.id.personal_username);
         fanhui = (TextView) findViewById(R.id.personal_fanhui);
         fenxiang = (TextView) findViewById(R.id.personal_fenxiang);
         tuichu = (TextView) findViewById(R.id.personal_tuichu);
+        change=(TextView)findViewById(R.id.personnal_change);
+
         tuichu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -127,8 +124,33 @@ public class PersonnalMessage extends FirstActivity {
         String account = preferences.getString("account", "account");
         uaccount.setText(account);
         uname.setText(name);
+    }
+    public void onClick(View v) {
+        //调用相册
+        Intent intent = new Intent(Intent.ACTION_PICK,
+                android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+        startActivityForResult(intent, IMAGE);
+    }
 
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        //获取图片路径
+        if (requestCode == IMAGE && resultCode == Activity.RESULT_OK && data != null) {
+            Uri selectedImage = data.getData();
+            String[] filePathColumns = {MediaStore.Images.Media.DATA};
+            Cursor c = getContentResolver().query(selectedImage, filePathColumns, null, null, null);
+            c.moveToFirst();
+            int columnIndex = c.getColumnIndex(filePathColumns[0]);
+            String imagePath = c.getString(columnIndex);
+            showImage(imagePath);
+            c.close();
+        }
+    }
 
+    //加载图片
+    private void showImage(String imaePath){
+        Bitmap bm = BitmapFactory.decodeFile(imaePath);
+        personnal_touxiang.setImageBitmap(bm);
     }
 
 }

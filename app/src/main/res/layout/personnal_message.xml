@@ -14,14 +14,30 @@
        android:textSize="17dp"
        android:id="@+id/personal_fanhui"
        android:text="返回"/>
-    <ImageButton
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-       android:src="@mipmap/tubiao"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="50dp"
-        android:id="@+id/personal_touxiang"
-        android:background="#fff"/>
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/tubiao"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="50dp"
+            android:id="@+id/personal_touxiang"
+            android:background="#fff"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点击更换头像"
+            android:gravity="bottom"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="20dp"
+            android:onClick="onClick"
+            android:id="@+id/personnal_change"/>
+
+    </LinearLayout>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

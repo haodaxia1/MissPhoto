@@ -3,6 +3,7 @@ package com.example.administrator.missphoto;
 /**
  * Created by 隔窗望海 on 2016/12/8.
  */
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -22,7 +23,7 @@ import java.net.URL;
 import java.net.URLEncoder;
 import java.util.Calendar;
 
-public class GettimeActivity extends AppCompatActivity {
+public class GettimeActivity extends Activity {
     private Button button;
     private int year;
     private int month;
