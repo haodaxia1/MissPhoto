@@ -5,26 +5,29 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.administrator.missphoto.TakephotoActivity"
-    android:background="#fff">
-    <LinearLayout
-
-        android:layout_width="match_parent"
+    android:background="@drawable/loginbg">
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="10dp"
+       android:layout_marginLeft="10dp"
+       android:textSize="17dp"
+       android:id="@+id/personal_fanhui"
+       android:text="返回"/>
+    <ImageButton
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#fff">
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/btn_back"
-            android:background="#fff"
-            android:id="@+id/btn_back1"/>
-
-    </LinearLayout>
+       android:src="@mipmap/tubiao"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="50dp"
+        android:id="@+id/personal_touxiang"
+        android:background="#fff"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/personal_username"
         android:layout_marginLeft="50dp"
-        android:textSize="30dp"
+        android:textSize="19dp"
         android:layout_marginTop="30dp"/>
     <LinearLayout
         android:layout_width="match_parent"
@@ -33,7 +36,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="17dp"
+            android:textSize="12dp"
             android:layout_marginLeft="50dp"
             android:layout_marginTop="10dp"
             android:text="联系方式："/>
@@ -41,7 +44,33 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/personal_uaccount"
-            android:textSize="15dp"
+            android:textSize="12dp"
             android:layout_marginTop="10dp"/>
     </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginTop="30dp"
+        android:text="简介："
+        android:textSize="15dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginTop="10dp"
+        android:textSize="12dp"
+        android:text="画摄是一款旨在提供一个便捷的画师和摄影师的约稿交易平台。 该系统完全舍弃传统且缺少管理和流程化的交易方式，甲方和乙方只需通过该约稿交易平台，可以直接相互联系，减少中介抽取大量中介费用现象的发生。画师和想要约稿的人均为本约稿交易平台的使用者。"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="分享"
+        android:textSize="20dp"
+        android:id="@+id/personal_fenxiang"
+        android:layout_gravity="center"
+        android:gravity="center"/>
 </LinearLayout>
