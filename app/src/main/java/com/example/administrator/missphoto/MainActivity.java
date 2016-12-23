@@ -297,16 +297,18 @@ public class MainActivity extends Activity {
                     transaction.replace(R.id.contaner, mRequest);
                     break;
                 case R.id.btn_mine:
-                    if (mMine == null) {
-                        mMine = new MineFragment();
-                    }
-                    //3. 设置页面
-                    mBtnMine.setImageResource(image1[4]);
-                    mBtnHome.setImageResource(image0[0]);
-                    mBtnCamera.setImageResource(image0[1]);
-                    mBtnPost.setImageResource(image0[2]);
-                    mBtnRequest.setImageResource(image0[3]);
-                    transaction.replace(R.id.contaner, mMine);
+                    Intent i=new Intent(MainActivity.this,PersonnalMessage.class);
+                    startActivity(i);
+//                    if (mMine == null) {
+//                        mMine = new MineFragment();
+//                    }
+//                    //3. 设置页面
+//                    mBtnMine.setImageResource(image1[4]);
+//                    mBtnHome.setImageResource(image0[0]);
+//                    mBtnCamera.setImageResource(image0[1]);
+//                    mBtnPost.setImageResource(image0[2]);
+//                    mBtnRequest.setImageResource(image0[3]);
+//                    transaction.replace(R.id.contaner, mMine);
                     break;
             }
             //4. 执行更改

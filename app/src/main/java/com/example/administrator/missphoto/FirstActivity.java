@@ -13,6 +13,9 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
@@ -31,6 +34,7 @@ public class FirstActivity extends Activity {
     private EditText passWord;
     private Button btn_zhuce_entry;
     private Button btn_first_ok;
+    public String name,account;
 
     Handler handler2 = new Handler()
     {
@@ -41,6 +45,7 @@ public class FirstActivity extends Activity {
                 Intent intent = new Intent();
                 intent.setClass(FirstActivity.this,MainActivity.class);
                 startActivity(intent);
+
             } else {
                 Toast.makeText(FirstActivity.this, "用户名或密码错误", Toast.LENGTH_LONG).show();
             }
@@ -80,7 +85,7 @@ public class FirstActivity extends Activity {
             @Override
             public void onClick(View view) {
                 try {
-                    urlPath2 = "http://10.7.88.111:8080/user/?obj=1&upwd="+passWord.getText().toString()
+                    urlPath2 = "http://172.16.17.191:8080/user/?obj=1&upwd="+passWord.getText().toString()
                             +"&uname="+URLEncoder.encode(userName.getText().toString(),"UTF-8");
                 } catch (UnsupportedEncodingException e) {
                     e.printStackTrace();
@@ -102,18 +107,25 @@ public class FirstActivity extends Activity {
                                 while ((retData = in.readLine()) != null) {
                                     responseData += retData;
                                 }
-
-                                if (responseData.equals("ture")) {
+                                    String json = responseData;
+                                JSONArray j=new JSONArray(json);
+                                JSONObject item=j.getJSONObject(0);
+                                    int id=item.getInt("uid");
+                                    account=item.getString("uaccount");
+                                    name=item.getString("uname");
                                     handler2.sendEmptyMessage(0x123);
-                                }else {
-                                    handler2.sendEmptyMessage(0x122);
-                                }
+                                SharedPreferences preferences=getSharedPreferences("user",Context.MODE_PRIVATE);
+                                SharedPreferences.Editor editor=preferences.edit();
+                                editor.putString("name", name);
+                                editor.putString("account", account);
+                                editor.commit();
                                 in.close();
                             }
 
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
+
                     }
                 }.start();
             }

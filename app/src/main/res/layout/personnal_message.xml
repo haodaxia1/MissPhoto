@@ -6,7 +6,6 @@
     android:orientation="vertical"
     tools:context="com.example.administrator.missphoto.TakephotoActivity"
     android:background="#fff">
-
     <LinearLayout
 
         android:layout_width="match_parent"
@@ -23,65 +22,26 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="画       摄"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:textSize="40dp"
-        android:textColor="#f6c515" />
-
+        android:id="@+id/personal_username"
+        android:layout_marginLeft="50dp"
+        android:textSize="30dp"
+        android:layout_marginTop="30dp"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="310dp">
-        <LinearLayout
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            >
-            <GridView
-                android:id="@+id/gridView1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:background="#fff"
-                android:gravity="center" >
-            </GridView>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="作品"
-                android:textSize="17dp"
-                android:layout_marginTop="6dp"/>
-        </LinearLayout>
-
-        <LinearLayout
+            android:textSize="17dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp"
+            android:text="联系方式："/>
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            >
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:background="#fff"
-                android:src="@drawable/request"
-                android:id="@+id/btn_post_request"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="需求"
-                android:textSize="17dp"
-                android:layout_marginTop="6dp"/>
-
-        </LinearLayout>
-
+            android:id="@+id/personal_uaccount"
+            android:textSize="15dp"
+            android:layout_marginTop="10dp"/>
     </LinearLayout>
 </LinearLayout>
