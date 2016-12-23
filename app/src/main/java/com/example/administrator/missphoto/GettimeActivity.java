@@ -3,7 +3,9 @@ package com.example.administrator.missphoto;
 /**
  * Created by 隔窗望海 on 2016/12/8.
  */
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -34,6 +36,8 @@ public class GettimeActivity extends AppCompatActivity {
     private String urlRequestPath;
     private URL url;
     private EditText ruId;
+    private EditText EtPutrequestRuid;
+    private int uid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +51,8 @@ public class GettimeActivity extends AppCompatActivity {
         minute = c.get(Calendar.MINUTE);
         second=c.get(Calendar.SECOND);
         final int Month = month+1;
-        findView();
+        EtPutrequestRuid.setText(uid);
+      findView();
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -93,7 +98,6 @@ public class GettimeActivity extends AppCompatActivity {
             }
         });
     }
-
     private void findView() {
         ruId = (EditText)findViewById(R.id.EtPutrequestRuid);
         requestContent = (EditText)findViewById(R.id.EtPutrequestContent);

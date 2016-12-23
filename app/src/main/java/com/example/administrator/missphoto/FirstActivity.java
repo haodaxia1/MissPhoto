@@ -41,13 +41,12 @@ public class FirstActivity extends Activity {
         public void handleMessage(Message msg)
         {
             if (msg.what == 0x123) {
-                Toast.makeText(FirstActivity.this, "登陆成功", Toast.LENGTH_LONG).show();
+                Toast.makeText(FirstActivity.this, "登陆成功，Welcom MissPhoto", Toast.LENGTH_LONG).show();
                 Intent intent = new Intent();
                 intent.setClass(FirstActivity.this,MainActivity.class);
                 startActivity(intent);
-
             } else {
-                Toast.makeText(FirstActivity.this, "用户名或密码错误", Toast.LENGTH_LONG).show();
+                Toast.makeText(FirstActivity.this, "用户名或者密码错误", Toast.LENGTH_SHORT).show();
             }
         }
     };
@@ -107,21 +106,24 @@ public class FirstActivity extends Activity {
                                 while ((retData = in.readLine()) != null) {
                                     responseData += retData;
                                 }
+                                if(responseData.equals("false")){
+                                    handler2.sendEmptyMessage(0x122);
+                                }
                                     String json = responseData;
                                 JSONArray j=new JSONArray(json);
                                 JSONObject item=j.getJSONObject(0);
-                                    int id=item.getInt("uid");
-                                    account=item.getString("uaccount");
-                                    name=item.getString("uname");
-                                    handler2.sendEmptyMessage(0x123);
+                                int id=item.getInt("uid");
+                                account=item.getString("uaccount");
+                                name=item.getString("uname");
+                                handler2.sendEmptyMessage(0x123);
                                 SharedPreferences preferences=getSharedPreferences("user",Context.MODE_PRIVATE);
                                 SharedPreferences.Editor editor=preferences.edit();
+                                editor.putInt("id", id);
                                 editor.putString("name", name);
                                 editor.putString("account", account);
                                 editor.commit();
                                 in.close();
                             }
-
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
