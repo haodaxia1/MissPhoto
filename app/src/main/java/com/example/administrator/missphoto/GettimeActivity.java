@@ -51,7 +51,6 @@ public class GettimeActivity extends AppCompatActivity {
         minute = c.get(Calendar.MINUTE);
         second=c.get(Calendar.SECOND);
         final int Month = month+1;
-        EtPutrequestRuid.setText(uid);
       findView();
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,43 +59,7 @@ public class GettimeActivity extends AppCompatActivity {
             }
         });
 
-        publish.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                new  Thread(){
-                    @Override
-                    public void run() {
-                        try {
-                            urlRequestPath = "http://10.7.92.42:8080/request/?obj=4&ruid="+ruId.getText().toString()
-                                                +"&rdetail="+ URLEncoder.encode(requestContent.getText().toString(),"UTF-8")
-                                                +"&rdate="+URLEncoder.encode(editText.getText().toString(),"UTF-8");
 
-                            url = new URL(urlRequestPath);
-
-                            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-
-                            if (conn.getResponseCode() == 200){
-                                //获得服务器响应数据
-                                BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream(),"UTF-8"));
-                                //数据
-                                String retData = null;
-                                String responseData = "";
-                                while ((retData = in.readLine()) != null){
-                                    responseData += retData;
-                                }
-                                in.close();
-                                Intent  i = new Intent();
-                                i.setClass(GettimeActivity.this,TakephotoActivity.class);
-                                startActivity(i);
-
-                            }
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }.start();
-            }
-        });
     }
     private void findView() {
         ruId = (EditText)findViewById(R.id.EtPutrequestRuid);

@@ -44,7 +44,13 @@ import java.util.Map;
 import cn.sharesdk.onekeyshare.OnekeyShare;
 
 public class PersonnalMessage extends FirstActivity {
-    private ImageButton btn_back;
+    private GridView gridView1;              //网格显示缩略图
+    private Button buttonPublish;            //发布按钮
+    private final int IMAGE_OPEN = 1;        //打开图片标记
+    private String pathImage;                //选择图片路径
+    private Bitmap bmp;                      //导入临时图片
+    private ArrayList<HashMap<String, Object>> imageItem;
+    private SimpleAdapter simpleAdapter;     //适配器
     private String urlPath2;
     private URL url;
     private EditText passWord;
@@ -56,25 +62,36 @@ public class PersonnalMessage extends FirstActivity {
     private Button personnal_mine;
     private TextView fanhui;
     private TextView fenxiang;
+    private TextView tuichu;
+    private ImageButton personnal_touxiang;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.personnal_message);
-        btn_back=(ImageButton)findViewById(R.id.btn_back1);
-        uaccount=(TextView)findViewById(R.id.personal_uaccount);
-        uname=(TextView)findViewById(R.id.personal_username);
-        fanhui=(TextView)findViewById(R.id.personal_fanhui);
-        fenxiang=(TextView)findViewById(R.id.personal_fenxiang);
+        personnal_touxiang = (ImageButton) findViewById(R.id.personal_touxiang);
+        uaccount = (TextView) findViewById(R.id.personal_uaccount);
+        uname = (TextView) findViewById(R.id.personal_username);
+        fanhui = (TextView) findViewById(R.id.personal_fanhui);
+        fenxiang = (TextView) findViewById(R.id.personal_fenxiang);
+        tuichu = (TextView) findViewById(R.id.personal_tuichu);
+        tuichu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent();
+                i.setClass(PersonnalMessage.this, FirstActivity.class);
+                startActivity(i);
+            }
+        });
         fanhui.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i=new Intent();
+                Intent i = new Intent();
                 i.setClass(PersonnalMessage.this, MainActivity.class);
                 startActivity(i);
             }
         });
-        fenxiang.setOnClickListener(new  View.OnClickListener() {
+        fenxiang.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
@@ -105,23 +122,13 @@ public class PersonnalMessage extends FirstActivity {
                 oks.show(getBaseContext());
             }
         });
-        SharedPreferences preferences=getSharedPreferences("user", Context.MODE_PRIVATE);
-        String name=preferences.getString("name", "name");
-        String account=preferences.getString("account", "account");
+        SharedPreferences preferences = getSharedPreferences("user", Context.MODE_PRIVATE);
+        String name = preferences.getString("name", "name");
+        String account = preferences.getString("account", "account");
         uaccount.setText(account);
         uname.setText(name);
-//        personnal_mine=(Button)findViewById(R.id.personal_mine);
-//        personnal_mine.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                SharedPreferences preferences=getSharedPreferences("user", Context.MODE_PRIVATE);
-//                String name=preferences.getString("name", "name");
-//                String account=preferences.getString("account", "account");
-//                uaccount.setText(account);
-//                uname.setText(name);
-//            }
-//        });
 
 
-}
+    }
+
 }
