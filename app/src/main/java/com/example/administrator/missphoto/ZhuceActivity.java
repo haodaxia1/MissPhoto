@@ -6,10 +6,12 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
+import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
@@ -32,9 +34,9 @@ import cn.smssdk.gui.RegisterPage;
 public class ZhuceActivity extends Activity {
     private String urlPath,urlPath2;
     private URL url = null;
-    private ImageButton btn_back;
+    private TextView btn_back;
     private Button btn_ok;
-    private Button btn_fx;
+    private TextView btn_fx;
     private EditText userName;
     private EditText passWord;
     private EditText uaccount;
@@ -48,8 +50,10 @@ public class ZhuceActivity extends Activity {
         setContentView(R.layout.activity_zhuce);
         userName=(EditText)findViewById(R.id.zhuce_user);
         passWord=(EditText)findViewById(R.id.zhuce_password);
+        //设置密码为密文显示
+        passWord.setTransformationMethod(PasswordTransformationMethod.getInstance());
         uaccount=(EditText)findViewById(R.id.zhuce_uaccount);
-        btn_back=(ImageButton)findViewById(R.id.btn_back1);
+        btn_back=(TextView)findViewById(R.id.btn_back1);
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -123,7 +127,7 @@ public class ZhuceActivity extends Activity {
                 registerPage.show(getBaseContext());
             }
         });
-        btn_fx=(Button)findViewById(R.id.btn_fx);
+        btn_fx=(TextView)findViewById(R.id.btn_fx);
         btn_fx.setOnClickListener(new  View.OnClickListener() {
 
             @Override

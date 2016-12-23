@@ -5,108 +5,113 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.administrator.missphoto.MainActivity"
-    android:background="#535151"
+    android:background="@drawable/loginbg"
     android:weightSum="1">
-    <LinearLayout
-
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#fff">
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/btn_back"
-            android:background="#fff"
-            android:id="@+id/btn_back1"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="              MissPhoto"
-            android:textSize="25dp"
-            android:paddingTop="10dp"/>
-
-    </LinearLayout>
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:text="画  摄"
+        android:textSize="40dp"
+        android:textColor="#ffffff"/>
     <LinearLayout
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="#fff"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="80dp"
         android:layout_marginBottom="20dp"
         android:layout_weight="1.03">
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/touxiang1"
-            android:id="@+id/btn_touxiang"
-            android:background="#fff"
-            android:layout_gravity="center"
-            android:layout_marginTop="30dp"
-            />
         <LinearLayout
-            android:layout_width="335dp"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:orientation="vertical"
-            android:background="@drawable/zhijiao"
             android:layout_marginTop="40dp">
-            <EditText
-                android:layout_width="320dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/yuanjiao"
-                android:id="@+id/zhuce_user"
-                android:layout_gravity="center"
-                android:layout_marginTop="30dp"
-                android:paddingTop="5dp"
-                android:paddingBottom="5dp"
-                android:hint="昵称："
-                />
-            <EditText
-                android:layout_width="320dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/yuanjiao"
-                android:layout_gravity="center"
-                android:layout_marginTop="30dp"
-                android:id="@+id/zhuce_password"
-                android:paddingTop="5dp"
-                android:paddingBottom="5dp"
-                android:hint="请输入密码："
-                android:gravity="top"/>
-            <EditText
-                android:layout_width="320dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/yuanjiao"
-                android:layout_gravity="center"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="30dp"
-                android:id="@+id/zhuce_uaccount"
-                android:paddingTop="5dp"
-                android:paddingBottom="5dp"
-                android:hint="请输入联系方式："
-                android:gravity="top"/>
-
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="昵称:"
+                    android:textSize="18dp"
+                    android:textColor="#ffffff"
+                    android:paddingTop="10dp"/>
+                <EditText
+                    android:layout_width="270dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/zhuce_user" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="密码:"
+                    android:textSize="18dp"
+                    android:textColor="#ffffff"
+                    android:paddingTop="10dp"/>
+                <EditText
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/zhuce_password" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="联系方式:"
+                    android:textSize="18dp"
+                    android:textColor="#ffffff"
+                    android:paddingTop="10dp"/>
+                <EditText
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/zhuce_uaccount" />
+            </LinearLayout>
         </LinearLayout>
-
         <Button
-            android:layout_width="335dp"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/yuanjiao"
-            android:text="注册"
+            android:background="@drawable/loginbutton"
+            android:textColor="#ffffff"
+            android:textSize="25dp"
+            android:text="注  册"
             android:layout_marginTop="30dp"
             android:layout_gravity="center"
             android:id="@+id/btn_ok"/>
-        <Button
-            android:layout_width="330dp"
-            android:layout_height="30dp"
-            android:background="@drawable/zhijiao"
-            android:text="分享"
-            android:textSize="10dp"
-            android:layout_marginTop="5dp"
-            android:layout_gravity="center"
-            android:id="@+id/btn_fx"/>
-
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:text="登录"
+                android:textSize="20dp"
+                android:textColor="#ffffff"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="25dp"
+                android:id="@+id/btn_back1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="分享"
+                android:textSize="20dp"
+                android:textColor="#ffffff"
+                android:id="@+id/btn_fx"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="165dp"/>
+        </LinearLayout>
     </LinearLayout>
-
-
 </LinearLayout>

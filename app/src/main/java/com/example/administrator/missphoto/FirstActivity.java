@@ -7,10 +7,12 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.json.JSONArray;
@@ -33,7 +35,7 @@ public class FirstActivity extends Activity {
     private EditText userName;
     private EditText passWord;
     private Button btn_zhuce_entry;
-    private Button btn_first_ok;
+    private TextView btn_first_ok;
     public String name,account;
 
     Handler handler2 = new Handler()
@@ -69,8 +71,10 @@ public class FirstActivity extends Activity {
             edit.commit();}
         userName=(EditText)findViewById(R.id.first_username);
         passWord=(EditText)findViewById(R.id.first_password);
+        //设置密码为密文显示
+        passWord.setTransformationMethod(PasswordTransformationMethod.getInstance());
         btn_zhuce_entry=(Button)findViewById(R.id.btn_first_entry);
-        btn_first_ok=(Button)findViewById(R.id.btn_first_ok);
+        btn_first_ok=(TextView)findViewById(R.id.btn_first_ok);
         btn_first_ok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

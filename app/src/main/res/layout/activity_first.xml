@@ -3,39 +3,33 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    android:background="#fff"
-    >
+    android:background="@drawable/loginbg">
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="MissPhoto"
-        android:gravity="center"
-        android:textSize="25dp"
-        android:layout_marginTop="9dp"
         android:layout_gravity="center"
-        android:textColor="#050505" />
-    <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-        android:layout_marginTop="60dp"
-            android:src="@mipmap/touxiang1"/>
+        android:layout_marginTop="50dp"
+        android:text="画  摄"
+        android:textSize="40dp"
+        android:textColor="#ffffff"/>
     <EditText
         android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/yuanjiao"
         android:layout_gravity="center"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="150dp"
         android:hint="请输入用户名："
+        android:textColorHint="#ffffff"
+        android:textSize="18dp"
         android:id="@+id/first_username"
         />
     <EditText
         android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/yuanjiao"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:hint="请输入密码："
+        android:textColorHint="#ffffff"
+        android:textSize="18dp"
         android:id="@+id/first_password"
         />
     <Button
@@ -43,20 +37,19 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
-        android:text="登录"
-        android:background="#eac5ecfc"
-        android:id="@+id/btn_first_entry"/>
-
-    <Button
+        android:text="登  录"
+        android:background="@drawable/loginbutton"
+        android:id="@+id/btn_first_entry"
+        android:textColor="#ffffff"
+        android:textSize="25dp"/>
+    <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="70dp"
         android:layout_gravity="center"
         android:text="没有账号？点击这里注册"
         android:id="@+id/btn_first_ok"
-        android:background="#fff"
-        android:textColor="#d9d6d6" />
-
-
+        android:textColor="#ffffff" />
 
 </LinearLayout>
