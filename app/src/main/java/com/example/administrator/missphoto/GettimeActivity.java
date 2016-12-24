@@ -51,7 +51,6 @@ public class GettimeActivity extends AppCompatActivity {
         minute = c.get(Calendar.MINUTE);
         second=c.get(Calendar.SECOND);
         final int Month = month+1;
-        EtPutrequestRuid.setText(uid);
       findView();
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,7 +66,7 @@ public class GettimeActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         try {
-                            urlRequestPath = "http://10.7.88.111:8080/request/?obj=4&ruid="+ruId.getText().toString()
+                            urlRequestPath = "http://172.16.29.5/request/?obj=4&ruid="+ruId.getText().toString()
                                                 +"&rdetail="+ URLEncoder.encode(requestContent.getText().toString(),"UTF-8")
                                                 +"&rdate="+URLEncoder.encode(editText.getText().toString(),"UTF-8");
 

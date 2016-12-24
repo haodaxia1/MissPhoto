@@ -88,7 +88,7 @@ public class ZhuceActivity extends Activity {
                                         try
                                         {
 
-                                            urlPath = "http://172.16.17.191:8080/user/?obj=0&upwd="+passWord.getText().toString()
+                                            urlPath = "http://172.16.29.5/user/?obj=0&upwd="+passWord.getText().toString()
                                                     +"&uname="+URLEncoder.encode(userName.getText().toString(),"UTF-8")
                                                     +"&uaccount="+URLEncoder.encode(uaccount.getText().toString(),"UTF-8");
 

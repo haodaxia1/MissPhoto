@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#ffffff"
     android:layout_marginTop="5dp"
     android:layout_marginLeft="10dp"
     android:layout_marginRight="10dp"
+    android:descendantFocusability="blocksDescendants"
     tools:context="com.example.administrator.missphoto.MainActivity">
 
 
@@ -44,7 +44,7 @@
         <TextView
             android:id="@+id/TvReqitemRequest"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="wrap_content"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:paddingTop="5dp"
