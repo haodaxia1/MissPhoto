@@ -109,7 +109,7 @@ public class RequestFragment extends Fragment {
                             responseData += retData;
                         }
 
-
+//                        JSONObject jsonObject = new JSONObject(responseData);
 //                        JSONObject jsonObject = new JSONObject(responseData);
 //                        JSONArray jsonArray = jsonObject.getJSONArray("list");
 //                        for (int i = 0; i < jsonArray.length(); i++) {
