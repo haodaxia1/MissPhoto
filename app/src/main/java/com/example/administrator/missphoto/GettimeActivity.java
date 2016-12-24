@@ -3,7 +3,6 @@ package com.example.administrator.missphoto;
 /**
  * Created by 隔窗望海 on 2016/12/8.
  */
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -23,7 +22,7 @@ import java.net.URL;
 import java.net.URLEncoder;
 import java.util.Calendar;
 
-public class GettimeActivity extends Activity {
+public class GettimeActivity extends AppCompatActivity {
     private Button button;
     private int year;
     private int month;
@@ -60,7 +59,43 @@ public class GettimeActivity extends Activity {
             }
         });
 
+        publish.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new  Thread(){
+                    @Override
+                    public void run() {
+                        try {
+                            urlRequestPath = "http://172.16.29.5/request/?obj=4&ruid="+ruId.getText().toString()
+                                                +"&rdetail="+ URLEncoder.encode(requestContent.getText().toString(),"UTF-8")
+                                                +"&rdate="+URLEncoder.encode(editText.getText().toString(),"UTF-8");
 
+                            url = new URL(urlRequestPath);
+
+                            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+
+                            if (conn.getResponseCode() == 200){
+                                //获得服务器响应数据
+                                BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream(),"UTF-8"));
+                                //数据
+                                String retData = null;
+                                String responseData = "";
+                                while ((retData = in.readLine()) != null){
+                                    responseData += retData;
+                                }
+                                in.close();
+                                Intent  i = new Intent();
+                                i.setClass(GettimeActivity.this,TakephotoActivity.class);
+                                startActivity(i);
+
+                            }
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }.start();
+            }
+        });
     }
     private void findView() {
         ruId = (EditText)findViewById(R.id.EtPutrequestRuid);

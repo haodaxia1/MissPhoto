@@ -88,7 +88,7 @@ public class FirstActivity extends Activity {
             @Override
             public void onClick(View view) {
                 try {
-                    urlPath2 = "http://10.7.88.34:8080/user/?obj=1&upwd="+passWord.getText().toString()
+                    urlPath2 = "http://172.16.29.5/user/?obj=1&upwd="+passWord.getText().toString()
                             +"&uname="+URLEncoder.encode(userName.getText().toString(),"UTF-8");
                 } catch (UnsupportedEncodingException e) {
                     e.printStackTrace();
@@ -113,7 +113,7 @@ public class FirstActivity extends Activity {
                                 if(responseData.equals("false")){
                                     handler2.sendEmptyMessage(0x122);
                                 }
-                                    String json = responseData;
+                                String json = responseData;
                                 JSONArray j=new JSONArray(json);
                                 JSONObject item=j.getJSONObject(0);
                                 int id=item.getInt("uid");
