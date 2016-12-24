@@ -89,10 +89,14 @@ public class ZhuceActivity extends Activity {
                                         {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                                             urlPath = "http://172.16.29.5/user/?obj=0&upwd="+passWord.getText().toString()
 =======
                                             urlPath = "http://10.7.88.34:8080/user/?obj=0&upwd="+passWord.getText().toString()
 >>>>>>> origin/master
+=======
+                                            urlPath = "http://172.16.17.191:8080/user/?obj=0&upwd="+passWord.getText().toString()
+>>>>>>> parent of 9ebaaa4... 从服务器获取需求
                                                     +"&uname="+URLEncoder.encode(userName.getText().toString(),"UTF-8")
                                                     +"&uaccount="+URLEncoder.encode(uaccount.getText().toString(),"UTF-8");
 

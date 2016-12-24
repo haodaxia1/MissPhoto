@@ -89,10 +89,14 @@ public class FirstActivity extends Activity {
             public void onClick(View view) {
                 try {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     urlPath2 = "http://172.16.29.5/user/?obj=1&upwd="+passWord.getText().toString()
 =======
                     urlPath2 = "http://10.7.88.34:8080/user/?obj=1&upwd="+passWord.getText().toString()
 >>>>>>> origin/master
+=======
+                    urlPath2 = "http://172.16.17.191:8080/user/?obj=1&upwd="+passWord.getText().toString()
+>>>>>>> parent of 9ebaaa4... 从服务器获取需求
                             +"&uname="+URLEncoder.encode(userName.getText().toString(),"UTF-8");
                 } catch (UnsupportedEncodingException e) {
                     e.printStackTrace();
@@ -117,7 +121,7 @@ public class FirstActivity extends Activity {
                                 if(responseData.equals("false")){
                                     handler2.sendEmptyMessage(0x122);
                                 }
-                                String json = responseData;
+                                    String json = responseData;
                                 JSONArray j=new JSONArray(json);
                                 JSONObject item=j.getJSONObject(0);
                                 int id=item.getInt("uid");
