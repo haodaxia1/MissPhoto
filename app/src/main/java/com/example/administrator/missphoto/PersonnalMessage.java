@@ -55,9 +55,8 @@ public class PersonnalMessage extends FirstActivity {
     private Button personnal_mine;
     private TextView fanhui;
     private TextView fenxiang;
-    private TextView tuichu;
+    private Button tuichu;
     private ImageView personnal_touxiang;
-    private TextView change;
     private static final int IMAGE = 1;
 
     @Override
@@ -69,8 +68,7 @@ public class PersonnalMessage extends FirstActivity {
         uname = (TextView) findViewById(R.id.personal_username);
         fanhui = (TextView) findViewById(R.id.personal_fanhui);
         fenxiang = (TextView) findViewById(R.id.personal_fenxiang);
-        tuichu = (TextView) findViewById(R.id.personal_tuichu);
-        change=(TextView)findViewById(R.id.personnal_change);
+        tuichu = (Button) findViewById(R.id.personal_tuichu);
 
         tuichu.setOnClickListener(new View.OnClickListener() {
             @Override
