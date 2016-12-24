@@ -41,8 +41,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import cn.sharesdk.onekeyshare.OnekeyShare;
+
 public class PersonnalMessage extends FirstActivity {
-    private ImageButton btn_back;
     private String urlPath2;
     private URL url;
     private EditText passWord;
@@ -52,40 +53,104 @@ public class PersonnalMessage extends FirstActivity {
     private String name,account;
     String responseData = "";
     private Button personnal_mine;
+    private TextView fanhui;
+    private TextView fenxiang;
+    private TextView tuichu;
+    private ImageView personnal_touxiang;
+    private TextView change;
+    private static final int IMAGE = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.personnal_message);
-        btn_back=(ImageButton)findViewById(R.id.btn_back1);
-        uaccount=(TextView)findViewById(R.id.personal_uaccount);
-        uname=(TextView)findViewById(R.id.personal_username);
+        personnal_touxiang = (ImageView) findViewById(R.id.personal_touxiang);
+        uaccount = (TextView) findViewById(R.id.personal_uaccount);
+        uname = (TextView) findViewById(R.id.personal_username);
+        fanhui = (TextView) findViewById(R.id.personal_fanhui);
+        fenxiang = (TextView) findViewById(R.id.personal_fenxiang);
+        tuichu = (TextView) findViewById(R.id.personal_tuichu);
+        change=(TextView)findViewById(R.id.personnal_change);
 
-        btn_back.setOnClickListener(new View.OnClickListener() {
+        tuichu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i=new Intent();
+                Intent i = new Intent();
+                i.setClass(PersonnalMessage.this, FirstActivity.class);
+                startActivity(i);
+            }
+        });
+        fanhui.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent();
                 i.setClass(PersonnalMessage.this, MainActivity.class);
                 startActivity(i);
             }
         });
-        SharedPreferences preferences=getSharedPreferences("user", Context.MODE_PRIVATE);
-        String name=preferences.getString("name", "name");
-        String account=preferences.getString("account", "account");
+        fenxiang.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+                OnekeyShare oks = new OnekeyShare();
+                //关闭sso授权
+                oks.disableSSOWhenAuthorize();
+                // title标题，印象笔记、邮箱、信息、微信、人人网、QQ和QQ空间使用
+                oks.setTitle("标题");
+                // titleUrl是标题的网络链接，仅在Linked-in,QQ和QQ空间使用
+                oks.setTitleUrl("http://sharesdk.cn");
+                // text是分享文本，所有平台都需要这个字段
+                oks.setText("我是分享文本");
+                //分享网络图片，新浪微博分享网络图片需要通过审核后申请高级写入接口，否则请注释掉测试新浪微博
+                oks.setImageUrl("http://f1.sharesdk.cn/imgs/2014/02/26/owWpLZo_638x960.jpg");
+                // imagePath是图片的本地路径，Linked-In以外的平台都支持此参数
+                //oks.setImagePath("/sdcard/test.jpg");//确保SDcard下面存在此张图片
+                // url仅在微信（包括好友和朋友圈）中使用
+                oks.setUrl("http://sharesdk.cn");
+                // comment是我对这条分享的评论，仅在人人网和QQ空间使用
+                oks.setComment("我是测试评论文本");
+                // site是分享此内容的网站名称，仅在QQ空间使用
+                oks.setSite("ShareSDK");
+                // siteUrl是分享此内容的网站地址，仅在QQ空间使用
+                oks.setSiteUrl("http://sharesdk.cn");
+
+// 启动分享GUI
+                oks.show(getBaseContext());
+            }
+        });
+        SharedPreferences preferences = getSharedPreferences("user", Context.MODE_PRIVATE);
+        String name = preferences.getString("name", "name");
+        String account = preferences.getString("account", "account");
         uaccount.setText(account);
         uname.setText(name);
-//        personnal_mine=(Button)findViewById(R.id.personal_mine);
-//        personnal_mine.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                SharedPreferences preferences=getSharedPreferences("user", Context.MODE_PRIVATE);
-//                String name=preferences.getString("name", "name");
-//                String account=preferences.getString("account", "account");
-//                uaccount.setText(account);
-//                uname.setText(name);
-//            }
-//        });
+    }
+    public void onClick(View v) {
+        //调用相册
+        Intent intent = new Intent(Intent.ACTION_PICK,
+                android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+        startActivityForResult(intent, IMAGE);
+    }
 
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        //获取图片路径
+        if (requestCode == IMAGE && resultCode == Activity.RESULT_OK && data != null) {
+            Uri selectedImage = data.getData();
+            String[] filePathColumns = {MediaStore.Images.Media.DATA};
+            Cursor c = getContentResolver().query(selectedImage, filePathColumns, null, null, null);
+            c.moveToFirst();
+            int columnIndex = c.getColumnIndex(filePathColumns[0]);
+            String imagePath = c.getString(columnIndex);
+            showImage(imagePath);
+            c.close();
+        }
+    }
 
-}
+    //加载图片
+    private void showImage(String imaePath){
+        Bitmap bm = BitmapFactory.decodeFile(imaePath);
+        personnal_touxiang.setImageBitmap(bm);
+    }
+
 }

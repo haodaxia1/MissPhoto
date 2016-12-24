@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.administrator.missphoto.TakephotoActivity"
-    android:background="#fff">
+    android:background="#fff"
+    >
 
     <LinearLayout
 
@@ -64,6 +65,7 @@
             android:orientation="vertical"
             android:layout_weight="1"
             android:layout_width="0dp"
+            android:layout_marginTop="6dp"
             >
             <ImageButton
                 android:layout_width="wrap_content"
