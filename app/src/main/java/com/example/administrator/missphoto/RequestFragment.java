@@ -3,7 +3,10 @@ package com.example.administrator.missphoto;
 import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.annotation.Nullable;
+import android.support.annotation.StringDef;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,11 +17,13 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLDecoder;
@@ -28,6 +33,8 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import java.util.logging.LogRecord;
 
 import static android.R.id.list;
 
@@ -53,7 +60,7 @@ public class RequestFragment extends Fragment {
         getData();
 //        addData();
         requestAdapter = new RequestAdapter(getActivity(),lRequest);
-        mRequestList.setAdapter(requestAdapter);
+
 
         return view;
     }
@@ -109,6 +116,13 @@ public class RequestFragment extends Fragment {
                             responseData += retData;
                         }
 
+                        //通知主线程更新UI
+                        Message message = new Message();
+                        message.what = 1;
+                        message.obj = responseData;
+                        handler.sendMessage(message);
+
+
 //                        JSONObject jsonObject = new JSONObject(responseData);
 //                        JSONObject jsonObject = new JSONObject(responseData);
 //                        JSONArray jsonArray = jsonObject.getJSONArray("list");
@@ -124,24 +138,24 @@ public class RequestFragment extends Fragment {
 //                            list.add(map);
 //                        }
 //                        System.out.println(list.get(0));
-                        String json = responseData;
-                        JSONArray j = new JSONArray(json);
-                        for (int i = 0 ; i < j.length();i++){
-                            JSONObject item = j.getJSONObject(i);
-                            int rid=item.getInt("rid");
-                            String rdate = item.getString("rdate");
-//                            String rdetail = item.getString("rdetail");//URLEncoder.encode(item.getString("rdetail"),"utf-8");//item.getString("rdetail"); //URLEncoder.encode(userName.getText().toString(),"UTF-8")
-                            String redetail = URLDecoder.decode(item.getString("rdetail"),"utf-8");
-
-//                            byte[] b_rdetail = rdetail.getBytes("utf-8");
-//                            String r_rdetail = new String(b_rdetail,"UTF-8");
-
-                            int ruid = item.getInt("ruid");
-
-                            lRequest.add(new Requset((long)rid,R.drawable.touxiang3,"作者",redetail,rdate));
-                            System.out.println(rid + rdate + redetail + ruid );
-
-                        }
+//                        String json = responseData;
+//                        JSONArray j = new JSONArray(json);
+//                        for (int i = 0 ; i < j.length();i++){
+//                            JSONObject item = j.getJSONObject(i);
+//                            int rid=item.getInt("rid");
+//                            String rdate = item.getString("rdate");
+////                            String rdetail = item.getString("rdetail");//URLEncoder.encode(item.getString("rdetail"),"utf-8");//item.getString("rdetail"); //URLEncoder.encode(userName.getText().toString(),"UTF-8")
+//                            String redetail = URLDecoder.decode(item.getString("rdetail"),"utf-8");
+//
+////                            byte[] b_rdetail = rdetail.getBytes("utf-8");
+////                            String r_rdetail = new String(b_rdetail,"UTF-8");
+//
+//                            int ruid = item.getInt("ruid");
+//
+//                            lRequest.add(new Requset((long)rid,R.drawable.touxiang3,"作者",redetail,rdate));
+//                            System.out.println(rid + rdate + redetail + ruid );
+//
+//                        }
 
 
                         //System.out.println(rid + rdate + rdetail + ruid + "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&");
@@ -168,4 +182,40 @@ public class RequestFragment extends Fragment {
             }
         }.start();
     }
+
+    private Handler handler = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            if (msg.what == 1){
+                JSONArray j = null;
+                try {
+                    j = new JSONArray((String)msg.obj);
+                    for (int i = 0 ; i < j.length();i++){
+                        JSONObject item = j.getJSONObject(i);
+                        int rid=item.getInt("rid");
+                        String rdate = item.getString("rdate");
+//                            String rdetail = item.getString("rdetail");//URLEncoder.encode(item.getString("rdetail"),"utf-8");//item.getString("rdetail"); //URLEncoder.encode(userName.getText().toString(),"UTF-8")
+                        String redetail = URLDecoder.decode(item.getString("rdetail"),"utf-8");
+
+//                            byte[] b_rdetail = rdetail.getBytes("utf-8");
+//                            String r_rdetail = new String(b_rdetail,"UTF-8");
+
+                        int ruid = item.getInt("ruid");
+
+                        lRequest.add(new Requset((long)rid,R.drawable.touxiang3,"作者",redetail,rdate));
+                        System.out.println(rid + rdate + redetail + ruid );
+
+                    }
+                    mRequestList.setAdapter(requestAdapter);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                } catch (UnsupportedEncodingException e) {
+                    e.printStackTrace();
+                }
+
+
+            }
+        }
+    };
 }
