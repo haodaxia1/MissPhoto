@@ -115,8 +115,7 @@ public class RequestFragment extends Fragment {
                         while ((retData = in.readLine()) != null){
                             responseData += retData;
                         }
-                        System.out.println("#######################################################");
-                        System.out.println(responseData);
+
                         //通知主线程更新UI
                         Message message = new Message();
                         message.what = 1;
