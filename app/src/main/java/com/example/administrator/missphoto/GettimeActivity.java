@@ -70,7 +70,7 @@ public class GettimeActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         try {
-                            urlRequestPath = "http://172.16.29.5/request/?obj=4&runame=" + URLEncoder.encode(name,"UTF-8")//&ruid="+ruId.getText().toString()
+                            urlRequestPath = (new Utils().URL)+"request/?obj=4&runame=" + URLEncoder.encode(name,"UTF-8")//&ruid="+ruId.getText().toString()
                                     +"&rdetail="+ URLEncoder.encode(requestContent.getText().toString(),"UTF-8")
                                     +"&rdate="+URLEncoder.encode(editText.getText().toString(),"UTF-8");
 

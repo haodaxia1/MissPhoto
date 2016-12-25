@@ -98,7 +98,7 @@ public class RequestFragment extends Fragment {
             @Override
             public void run() {
                 try {
-                    urlRequestfragmentPath = "http://172.16.29.5/request/?obj=5";
+                    urlRequestfragmentPath = (new Utils().URL)+"request/?obj=5";
 
                     url = new URL(urlRequestfragmentPath);
 
@@ -115,7 +115,8 @@ public class RequestFragment extends Fragment {
                         while ((retData = in.readLine()) != null){
                             responseData += retData;
                         }
-
+                        System.out.println("#######################################################");
+                        System.out.println(responseData);
                         //通知主线程更新UI
                         Message message = new Message();
                         message.what = 1;
@@ -202,8 +203,8 @@ public class RequestFragment extends Fragment {
 //                            String r_rdetail = new String(b_rdetail,"UTF-8");
 
                         int ruid = item.getInt("ruid");
-
-                        lRequest.add(new Requset((long)rid,R.drawable.touxiang3,"作者",redetail,rdate));
+                        String name = item.getString("rname");
+                        lRequest.add(new Requset((long)rid,R.drawable.touxiang3,name,redetail,rdate));
                         System.out.println(rid + rdate + redetail + ruid );
 
                     }
