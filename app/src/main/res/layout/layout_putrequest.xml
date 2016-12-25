@@ -2,14 +2,38 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/loginbg">
+    android:background="#EAF8FD">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ffffff"
+        android:orientation="horizontal" >
 
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btn_back"
+            android:padding="8dp" />
+
+        <TextView
+            android:id="@+id/tv_top_title"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:paddingRight="30dp"
+            android:text="MissPhoto"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+        </LinearLayout>
     <LinearLayout
         android:layout_width="330dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:orientation="vertical"
         android:layout_marginTop="90dp">
+
         <!--<EditText-->
             <!--android:id="@+id/EtPutrequestRuid"-->
             <!--android:layout_width="match_parent"-->
@@ -57,7 +81,8 @@
                 android:layout_gravity="center"
                 android:layout_alignParentRight="true"
                 android:background="@drawable/yuanjiao"
-                android:text="获取"/>
+                android:text="获取"
+                android:textSize="20dp"/>
 
         </RelativeLayout>
 
@@ -68,6 +93,7 @@
         android:layout_width="330dp"
         android:layout_height="wrap_content"
         android:text="发布"
+        android:textSize="20dp"
         android:background="@drawable/yuanjiao"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"/>
