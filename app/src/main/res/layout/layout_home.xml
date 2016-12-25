@@ -30,17 +30,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-            <ImageButton
-                android:layout_width="40dp"
-                android:layout_height="50dp"
-                android:src="@drawable/btn_back"
-                android:background="#ffffff"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:text="MissPhoto"
                 android:textSize="18dp"
-                android:paddingLeft="100dp"
+                android:gravity="center"
                 android:paddingTop="10dp"
                 android:background="#ffffff"/>
         </LinearLayout>
