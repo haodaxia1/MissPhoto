@@ -6,69 +6,104 @@
     android:orientation="vertical"
     tools:context="com.example.administrator.missphoto.TakephotoActivity"
     android:background="@drawable/loginbg">
-   <TextView
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:layout_marginTop="10dp"
-       android:layout_marginLeft="10dp"
-       android:textSize="17dp"
-       android:id="@+id/personal_fanhui"
-       android:text="返回"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="10dp"
+           android:layout_marginLeft="15dp"
+           android:textSize="20dp"
+           android:id="@+id/personal_fanhui"
+           android:text="返回"
+           android:textColor="#ffffff"
+           android:layout_weight="1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="分享"
+            android:textSize="20dp"
+            android:layout_marginRight="15dp"
+            android:id="@+id/personal_fenxiang"
+            android:textColor="#ffffff"
+            android:layout_weight="1"
+            android:gravity="right"/>
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
             android:src="@mipmap/tubiao"
             android:layout_marginTop="50dp"
-            android:layout_marginLeft="50dp"
+            android:layout_marginLeft="40dp"
             android:id="@+id/personal_touxiang"
-            android:background="#fff"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="点击更换头像"
-            android:gravity="bottom"
-            android:layout_gravity="bottom"
-            android:layout_marginLeft="20dp"
             android:onClick="onClick"
-            android:id="@+id/personnal_change"/>
-
-    </LinearLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/personal_username"
-        android:layout_marginLeft="50dp"
-        android:textSize="19dp"
-        android:layout_marginTop="30dp"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
+            android:adjustViewBounds="true"
+            android:maxWidth="90dp"
+            android:maxHeight="90dp"
+            android:background="@drawable/loginbutton"/>
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="12dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="10dp"
-            android:text="联系方式："/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/personal_uaccount"
-            android:textSize="12dp"
-            android:layout_marginTop="10dp"/>
+            android:orientation="vertical"
+            android:layout_marginTop="50dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="17dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="昵称："
+                    android:textColor="#ffffff"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/personal_username"
+                    android:textSize="17dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#ffffff"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="17dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="联系方式："
+                    android:textColor="#ffffff"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/personal_uaccount"
+                    android:textSize="17dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#ffffff"/>
+            </LinearLayout>
+
+        </LinearLayout>
     </LinearLayout>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="50dp"
         android:layout_marginRight="45dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="40dp"
         android:text="简介："
         android:textSize="15dp" />
     <TextView
@@ -79,23 +114,15 @@
         android:layout_marginTop="10dp"
         android:textSize="12dp"
         android:text="画摄是一款旨在提供一个便捷的画师和摄影师的约稿交易平台。 该系统完全舍弃传统且缺少管理和流程化的交易方式，甲方和乙方只需通过该约稿交易平台，可以直接相互联系，减少中介抽取大量中介费用现象的发生。画师和想要约稿的人均为本约稿交易平台的使用者。"/>
-
-    <TextView
-        android:layout_width="match_parent"
+    <Button
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="分享"
-        android:textSize="20dp"
-        android:id="@+id/personal_fenxiang"
-        android:layout_gravity="center"
-        android:gravity="center"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="70dp"
         android:text="退出当前账号"
-        android:textSize="20dp"
         android:id="@+id/personal_tuichu"
         android:layout_gravity="center"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:background="@drawable/loginbutton"
+        android:textColor="#ffffff"
+        android:textSize="25dp"/>
 </LinearLayout>
