@@ -23,7 +23,7 @@ public class HomeLikeAdapter extends BaseAdapter {
         this.context = context;
         this.lLike = lLike;
     }
-//
+////
     @Override
     public int getCount() {
         return lLike.size();
