@@ -6,13 +6,11 @@ package com.example.administrator.missphoto;
 public class HomeLike {
     private int id;
     private int pic;//展示作品
-    private int number;//名次图片
     private String name;//上榜人姓名
 
-    public HomeLike(int id, int pic, int number ,String name) {
+    public HomeLike(int id, int pic, String name) {
         this.id = id;
         this.pic = pic;
-        this.number = number;
         this.name = name;
 
     }
@@ -31,14 +29,6 @@ public class HomeLike {
 
     public void setPic(int pic) {
         this.pic = pic;
-    }
-
-    public int getNumber() {
-        return number;
-    }
-
-    public void setNum(int number) {
-        this.number = number;
     }
 
     public String getName() {

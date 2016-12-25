@@ -5,15 +5,15 @@ package com.example.administrator.missphoto;
  */
 public class HomeRequest {
     private int id;//id
-    private String num;//需求id
+/*    private int num;//需求id*/
     private String title; //需求详情
     private String request; //需求详情
     private String phone;//联系电话
     private String time; //发布时间
 
-    public HomeRequest(int id, String num, String title, String request, String phone, String time) {
+    public HomeRequest(int id /*int num*/, String title, String request, String phone, String time) {
         this.id = id;
-        this.num = num;
+/*        this.num = num;*/
         this.title = title;
         this.request = request;
         this.phone = phone;
@@ -28,13 +28,12 @@ public class HomeRequest {
         this.id = id;
     }
 
-    public String getNum() {
+/*    public int getNum() {
         return num;
     }
-
-    public void setNum(String num) {
+    public void setNum(int num) {
         this.num = num;
-    }
+    }*/
 
     public String getTitle() {
         return title;

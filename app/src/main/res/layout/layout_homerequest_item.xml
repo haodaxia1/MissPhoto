@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="80dp"
     android:orientation="vertical"
     android:background="#EAF8FD"
     android:layout_marginTop="5dp"
@@ -12,28 +12,19 @@
     tools:context="com.example.administrator.missphoto.MainActivity">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:background="#ffffff">
         <TextView
-            android:id="@+id/num"
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:textSize="18dp"
-            android:paddingTop="8dp"
-            android:paddingLeft="5dp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:textSize="18dp"
-            android:paddingTop="8dp"
-            android:text="、"/>
+            android:layout_height="wrap_content"
+            android:text="用户名："
+            android:paddingLeft="5dp"
+            />
         <TextView
             android:id="@+id/title"
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:textSize="18dp"
-            android:paddingTop="8dp" />
+            android:layout_height="wrap_content" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"

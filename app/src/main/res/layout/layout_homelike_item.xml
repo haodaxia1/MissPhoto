@@ -11,7 +11,7 @@
     android:paddingTop="0dp"
     tools:context="com.example.administrator.missphoto.MainActivity">
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginLeft="3dp"
@@ -19,21 +19,16 @@
         <ImageView
             android:id="@+id/pic"
             android:scaleType="fitXY"
-            android:layout_width="120dp"
-            android:layout_height="140dp"
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
             android:src="@drawable/yuehua" />
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-            <ImageView
-                android:id="@+id/number"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/num1"/>
             <TextView
                 android:id="@+id/name"
-                android:layout_width="100dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="第一名"
                 android:background="#ffffff"/>

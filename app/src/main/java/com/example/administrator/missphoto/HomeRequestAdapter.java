@@ -44,8 +44,8 @@ public class HomeRequestAdapter extends BaseAdapter {
             view = LayoutInflater.from(context).inflate(R.layout.layout_homerequest_item,null);
         }
 
-        TextView num  = (TextView) view.findViewById(R.id.num );
-        num  .setText(lRequest.get(i).getNum());
+/*        TextView num  = (TextView) view.findViewById(R.id.num );
+        num  .setText(lRequest.get(i).getNum());*/
         TextView title = (TextView) view.findViewById(R.id.title );
         title .setText(lRequest.get(i).getTitle());
         TextView request = (TextView) view.findViewById(R.id.request );

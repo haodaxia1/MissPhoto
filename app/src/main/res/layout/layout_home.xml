@@ -30,18 +30,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-            <ImageButton
-                android:layout_width="40dp"
-                android:layout_height="50dp"
-                android:src="@drawable/btn_back"
-                android:background="#ffffff"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:text="MissPhoto"
-                android:textSize="18dp"
-                android:paddingLeft="100dp"
-                android:paddingTop="10dp"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:gravity="center"
                 android:background="#ffffff"/>
         </LinearLayout>
         <ViewFlipper
@@ -71,7 +66,7 @@
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="303dp"
+            android:layout_height="250dp"
             android:orientation="vertical"
             android:background="#EAF8FD"
             android:layout_marginTop="8dp">
@@ -99,24 +94,23 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:text="点赞榜"
+                android:text="佳作欣赏"
                 android:textSize="20dp"
                 android:paddingTop="5dp"
                 android:paddingLeft="2dp" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="340dp"
+            android:layout_height="690dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:background="#EAF8FD">
-            <GridView
+            <ListView
                 android:id="@+id/grid"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:numColumns="3">
-            </GridView>
-
+            </ListView>
         </LinearLayout>
         <!--点赞榜栏目代码-->
     </LinearLayout>

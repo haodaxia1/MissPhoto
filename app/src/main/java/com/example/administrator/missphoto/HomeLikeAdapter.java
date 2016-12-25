@@ -47,8 +47,8 @@ public class HomeLikeAdapter extends BaseAdapter {
 
         ImageView pic = (ImageView) view.findViewById(R.id.pic );
         pic .setImageResource(lLike.get(i).getPic());
-        ImageView number = (ImageView) view.findViewById(R.id.number );
-        number .setImageResource(lLike.get(i).getNumber());
+/*        ImageView number = (ImageView) view.findViewById(R.id.number );
+        number .setImageResource(lLike.get(i).getNumber());*/
         TextView name = (TextView) view.findViewById(R.id.name );
         name .setText(lLike.get(i).getName());
 
