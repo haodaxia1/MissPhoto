@@ -117,7 +117,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void run() {
                 try {
-                    urlRequestfragmentPath = "http://10.7.86.108/request/?obj=5";
+                    urlRequestfragmentPath = (new Utils().URL)+"request/?obj=5";
 
                     url = new URL(urlRequestfragmentPath);
 
