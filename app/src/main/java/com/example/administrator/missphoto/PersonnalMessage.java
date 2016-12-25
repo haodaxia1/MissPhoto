@@ -26,11 +26,19 @@ import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.AsyncHttpResponseHandler;
+import com.loopj.android.http.RequestParams;
+
+import org.apache.http.Header;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
@@ -58,6 +66,7 @@ public class PersonnalMessage extends FirstActivity {
     private Button tuichu;
     private ImageView personnal_touxiang;
     private static final int IMAGE = 1;
+    private int uid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -120,6 +129,7 @@ public class PersonnalMessage extends FirstActivity {
         SharedPreferences preferences = getSharedPreferences("user", Context.MODE_PRIVATE);
         String name = preferences.getString("name", "name");
         String account = preferences.getString("account", "account");
+        uid=preferences.getInt("id",0);
         uaccount.setText(account);
         uname.setText(name);
     }
@@ -142,6 +152,7 @@ public class PersonnalMessage extends FirstActivity {
             String imagePath = c.getString(columnIndex);
             showImage(imagePath);
             c.close();
+            uploadPic(imagePath);
         }
     }
 
@@ -149,6 +160,54 @@ public class PersonnalMessage extends FirstActivity {
     private void showImage(String imaePath){
         Bitmap bm = BitmapFactory.decodeFile(imaePath);
         personnal_touxiang.setImageBitmap(bm);
+    }
+    private void uploadPic(String cropIMagePath){
+        if(cropIMagePath ==null){
+            Toast.makeText(PersonnalMessage.this,"文件不存在",Toast.LENGTH_SHORT).show();
+            return;
+        }
+        File file =new File(cropIMagePath);
+        if(file.exists() && file.length()>0){
+            AsyncHttpClient client = new AsyncHttpClient();
+
+            RequestParams params=new RequestParams();
+
+            params.put("uid",uid);
+            try {
+                params.put("img",file);
+
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+            String urls=(new Utils().URL)+"user";
+
+            client.post(urls, params, new AsyncHttpResponseHandler() {
+                @Override
+                public void onSuccess(int i, Header[] headers, byte[] bytes) {
+                    String result=new String(bytes);
+                    System.out.print(result);
+
+                    if(result.equals("1")){
+
+                        Toast.makeText(PersonnalMessage.this,"更新成功",Toast.LENGTH_SHORT).show();
+                        Intent m=new Intent(PersonnalMessage.this,MainActivity.class);
+//                        Utils.utils=3;
+                        startActivity(m);
+                        finish();
+                    }
+                    else{
+
+                        Toast.makeText(PersonnalMessage.this,"更新失败",Toast.LENGTH_SHORT).show();
+                    }
+                }
+
+                @Override
+                public void onFailure(int i, Header[] headers, byte[] bytes, Throwable throwable) {
+                    Toast.makeText(PersonnalMessage.this,"更新失败",Toast.LENGTH_SHORT).show();
+                }
+            });
+
+        }
     }
 
 }

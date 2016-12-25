@@ -3,7 +3,6 @@ package com.example.administrator.missphoto;
 /**
  * Created by 隔窗望海 on 2016/12/8.
  */
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -12,7 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -24,7 +23,7 @@ import java.net.URL;
 import java.net.URLEncoder;
 import java.util.Calendar;
 
-public class GettimeActivity extends Activity {
+public class GettimeActivity extends AppCompatActivity {
     private Button button;
     private int year;
     private int month;
@@ -40,7 +39,8 @@ public class GettimeActivity extends Activity {
     private EditText ruId;
     private EditText EtPutrequestRuid;
     private int uid;
-    private ImageView back;
+    //    private TextView personalUserName;
+    private String name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,32 +54,25 @@ public class GettimeActivity extends Activity {
         minute = c.get(Calendar.MINUTE);
         second=c.get(Calendar.SECOND);
         final int Month = month+1;
-      findView();
+        findView();
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 editText.setText(year+"-"+Month+"-"+day+"\t"+hour+":"+minute+":"+second);
             }
         });
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent();
-                i.setClass(GettimeActivity.this, MainActivity.class);
-                startActivity(i);
-            }
-        });
 
         publish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                System.out.println(name);
                 new  Thread(){
                     @Override
                     public void run() {
                         try {
-                            urlRequestPath = "http://172.16.29.5/request/?obj=4&ruid="+ruId.getText().toString()
-                                                +"&rdetail="+ URLEncoder.encode(requestContent.getText().toString(),"UTF-8")
-                                                +"&rdate="+URLEncoder.encode(editText.getText().toString(),"UTF-8");
+                            urlRequestPath = (new Utils().URL)+"request/?obj=4&runame=" + URLEncoder.encode(name,"UTF-8")//&ruid="+ruId.getText().toString()
+                                    +"&rdetail="+ URLEncoder.encode(requestContent.getText().toString(),"UTF-8")
+                                    +"&rdate="+URLEncoder.encode(editText.getText().toString(),"UTF-8");
 
                             url = new URL(urlRequestPath);
 
@@ -109,10 +102,14 @@ public class GettimeActivity extends Activity {
         });
     }
     private void findView() {
+        SharedPreferences preferences = getSharedPreferences("user", Context.MODE_PRIVATE);
+        name = preferences.getString("name", "name");
+//        personalUserName = (TextView)findViewById(R.id.personal_username);
+//        System.out.println(personalUserName.getText().toString());
+//        ruId = (EditText)findViewById(R.id.EtPutrequestRuid);
         requestContent = (EditText)findViewById(R.id.EtPutrequestContent);
         editText=(EditText)findViewById(R.id.edtext) ;
         button=(Button)findViewById(R.id.btn);
         publish = (Button)findViewById(R.id.btn_publish);
-        back = (ImageView)findViewById(R.id.back);
     }
 }
