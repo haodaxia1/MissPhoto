@@ -214,7 +214,7 @@ public class CameraFragment extends Fragment {
                             super.onProgress(bytesWritten, totalSize);
                             int count = (int) ((bytesWritten * 1.0 / totalSize) * 100);
                             // 下载进度显示
-//                progress.setProgress(count);
+
                             Log.e("下载 Progress>>>>>", bytesWritten + " / " + totalSize);
                         }
 
