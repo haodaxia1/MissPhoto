@@ -271,18 +271,18 @@ public class MainActivity extends Activity {
                     transaction.replace(R.id.contaner, mCamera);
                     break;
                 case R.id.btn_post:
-                    Intent intent=new Intent(MainActivity.this,TakephotoActivity.class);
-                    startActivity(intent);
-//                    if (mPost == null) {
-//                        mPost = new PostFragment();
-//                    }
-//                    //3. 设置页面
-//                    mBtnPost.setImageResource(image1[2]);
-//                    mBtnHome.setImageResource(image0[0]);
-//                    mBtnCamera.setImageResource(image0[1]);
-//                    mBtnRequest.setImageResource(image0[3]);
-//                    mBtnMine.setImageResource(image0[4]);
-//                    transaction.replace(R.id.contaner, mPost);
+//                    Intent intent=new Intent(MainActivity.this,TakephotoActivity.class);
+//                    startActivity(intent);
+                    if (mPost == null) {
+                        mPost = new PostFragment();
+                    }
+                    //3. 设置页面
+                    mBtnPost.setImageResource(image1[2]);
+                    mBtnHome.setImageResource(image0[0]);
+                    mBtnCamera.setImageResource(image0[1]);
+                    mBtnRequest.setImageResource(image0[3]);
+                    mBtnMine.setImageResource(image0[4]);
+                    transaction.replace(R.id.contaner, mPost);
                     break;
                 case R.id.btn_request:
                     if (mRequest == null) {

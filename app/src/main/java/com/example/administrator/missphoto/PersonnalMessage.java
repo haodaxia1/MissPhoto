@@ -170,6 +170,7 @@ public class PersonnalMessage extends FirstActivity {
         if(file.exists() && file.length()>0){
             AsyncHttpClient client = new AsyncHttpClient();
 
+
             RequestParams params=new RequestParams();
 
             params.put("uid",uid);
@@ -179,7 +180,7 @@ public class PersonnalMessage extends FirstActivity {
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
-            String urls=(new Utils().URL)+"user";
+            String urls=(new Utils().URL)+"user/edit";
 
             client.post(urls, params, new AsyncHttpResponseHandler() {
                 @Override

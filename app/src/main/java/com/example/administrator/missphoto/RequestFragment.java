@@ -58,33 +58,12 @@ public class RequestFragment extends Fragment {
 
         findView();
         getData();
-//        addData();
-        requestAdapter = new RequestAdapter(getActivity(),lRequest);
 
+        requestAdapter = new RequestAdapter(getActivity(),lRequest);
 
         return view;
     }
 
-
-//    @Override
-//    public void onActivityCreated(Bundle savedInstanceState) {
-//        super.onActivityCreated(savedInstanceState);
-//
-//        mRequestList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                getData();
-////                addData();
-//            }
-//        });
-//    }
-
-//    private void addData() {
-//        lRequest.add(new Requset(0L,R.drawable.touxiang3,"喵星狗宠物店老版","构图较完美。整个作品看起来均衡、稳定、有规律。有明显的视觉美。","2016-1-1"));
-//        lRequest.add(new Requset(1L,R.drawable.touxiang1,"神经病摄影店","轮廓清晰，主体突出，线条分明","2016-12-19"));
-//        lRequest.add(new Requset(2L,R.drawable.touxiang2,"(⊙o⊙)哦","色彩鲜艳、饱和、丰满，层次分明，有较强的感染力。","2016-8-18"));
-//        lRequest.add(new Requset(3L,R.drawable.touxiang3,"#%@#……#！……","对焦清晰，曝光正确。主题突出，细节明了。","2016-9-1"));
-//    }
 
     private void findView() {
         mRequestList = (ListView)view.findViewById(R.id.LvReqAdpview);
@@ -122,58 +101,8 @@ public class RequestFragment extends Fragment {
                         message.obj = responseData;
                         handler.sendMessage(message);
 
-
-//                        JSONObject jsonObject = new JSONObject(responseData);
-//                        JSONObject jsonObject = new JSONObject(responseData);
-//                        JSONArray jsonArray = jsonObject.getJSONArray("list");
-//                        for (int i = 0; i < jsonArray.length(); i++) {
-//                            JSONObject item = jsonArray.getJSONObject(i); // 得到每个对象
-//                            int id = item.getInt("rid");
-//                            String weburl = item.getString("rdate");
-//                            String username = item.getString("rdetail");
-//                            map = new HashMap<String, String>();
-//                            map.put("rid", id + "");
-//                            map.put("rdate", weburl);
-//                            map.put("rdetail",username);
-//                            list.add(map);
-//                        }
-//                        System.out.println(list.get(0));
-//                        String json = responseData;
-//                        JSONArray j = new JSONArray(json);
-//                        for (int i = 0 ; i < j.length();i++){
-//                            JSONObject item = j.getJSONObject(i);
-//                            int rid=item.getInt("rid");
-//                            String rdate = item.getString("rdate");
-////                            String rdetail = item.getString("rdetail");//URLEncoder.encode(item.getString("rdetail"),"utf-8");//item.getString("rdetail"); //URLEncoder.encode(userName.getText().toString(),"UTF-8")
-//                            String redetail = URLDecoder.decode(item.getString("rdetail"),"utf-8");
-//
-////                            byte[] b_rdetail = rdetail.getBytes("utf-8");
-////                            String r_rdetail = new String(b_rdetail,"UTF-8");
-//
-//                            int ruid = item.getInt("ruid");
-//
-//                            lRequest.add(new Requset((long)rid,R.drawable.touxiang3,"作者",redetail,rdate));
-//                            System.out.println(rid + rdate + redetail + ruid );
-//
-//                        }
-
-
-                        //System.out.println(rid + rdate + rdetail + ruid + "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&");
-//                        if (responseData != null && responseData.length() > 0) {
-//                            JSONObject jsonObject = new JSONObject(responseData);
-//                            JSONArray jsonArray = (JSONArray)jsonObject.get("ruid");
-//                            for (int i = 0;i < 3; i++){
-//                                JSONObject jsonObject1 = jsonArray.getJSONObject(i);
-//                                String rdate = jsonObject1.getString("rdate");
-//                                System.out.println(rdate);
-//                            }
-//                        }
-                        //Log.e("***********************",responseData);
-                        //System.out.println(responseData);
                         in.close();
-                        /*Intent i = new Intent();
-                        i.setClass(GettimeActivity.this,TakephotoActivity.class);
-                        startActivity(i);*/
+
 
                     }
                 } catch (Exception e) {
@@ -195,11 +124,7 @@ public class RequestFragment extends Fragment {
                         JSONObject item = j.getJSONObject(i);
                         int rid=item.getInt("rid");
                         String rdate = item.getString("rdate");
-//                            String rdetail = item.getString("rdetail");//URLEncoder.encode(item.getString("rdetail"),"utf-8");//item.getString("rdetail"); //URLEncoder.encode(userName.getText().toString(),"UTF-8")
                         String redetail = URLDecoder.decode(item.getString("rdetail"),"utf-8");
-
-//                            byte[] b_rdetail = rdetail.getBytes("utf-8");
-//                            String r_rdetail = new String(b_rdetail,"UTF-8");
 
                         int ruid = item.getInt("ruid");
                         String name = item.getString("rname");
